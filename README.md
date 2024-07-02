@@ -26,10 +26,10 @@ git clone myGitHub repo links lives here
 
 After cloning the repository run with IDE of your liking.
 Make sure you have created folders in src test resources :
-1.There is a folder with name "download"
-2.There is a folder with name "reports"
-3.There is a folder with name "screenshots"
-4.There is a folder with name "upload"
+- There is a folder with name "download"
+- There is a folder with name "reports"
+- There is a folder with name "screenshots"
+- There is a folder with name "upload"
 
 And in src/test/java/gui you can find the added test cases that can be run.
 
