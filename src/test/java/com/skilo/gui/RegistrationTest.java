@@ -58,7 +58,7 @@ public class RegistrationTest extends TestObject{
     @Test
     public void verifyUserCanNotRegisterWithINValidData(){
         System.out.println("\n _________________________________________________");
-        System.out.println("=== > *** Verify user cannot registered in the system with invalid data *** < ===");
+        System.out.println("=== > *** Verify user cannot register in the system with invalid data *** < ===");
         HomePage homePage = new HomePage(super.getWebDriver());
 
         /* ***************************************
