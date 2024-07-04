@@ -1,22 +1,28 @@
 package com.skillo.POM;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.io.File;
 
 public class PostPage extends ISkillo {
 
-    //1 CONSTS
-    final String POST_PAGE_URL = "/posts/create";
-
-    //2 UI MAP
+    private final String POST_PAGE_URL = "posts/create";
+    @FindBy(css = "img.image-preview")
+    private WebElement image;
+    @FindBy(css = "input.input-lg")
+    private WebElement imageTextElement;
+    @FindBy(css = ".file[type='file']")
+    private WebElement uploadField;
+    @FindBy(name = "caption")
+    private WebElement captionElement;
     @FindBy(id = "create-post")
     private WebElement createP0ostButton;
 
-    //3 CONSTRUCTOR
     public PostPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -24,26 +30,40 @@ public class PostPage extends ISkillo {
 
     public boolean isImageVisible() {
         boolean isVisible = false;
-        return isVisible;
 
+        try {
+            isVisible = wait.until(ExpectedConditions.visibilityOf(image)).isDisplayed();
+
+            System.out.println("CONFIRMATION # The file is visible.");
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+            System.out.println("ERROR : The file is not visible");
+            isVisible = false;
+        };
+
+        return isVisible;
     };
 
-    //4. USER ACTIONS
-
     public String getImageName() {
-        String iCanDoIt = "I can do it";
-        return iCanDoIt;
+        String imageName = imageTextElement.getAttribute("placeholder");
+        System.out.println("CONFIRMATION # The image name is: " + imageName);
+        return imageName;
     };
 
     public void uploadPicture(File file) {
-        System.out.println("I can do it");
+        uploadField.sendKeys(file.getAbsolutePath());
+        System.out.println("CONFIRMATION # The file was successfully uploaded");
     };
 
     public void providePostCaption(String caption) {
-        System.out.println("Some text here");
+        wait.until(ExpectedConditions.visibilityOf(captionElement));
+        captionElement.sendKeys(caption);
+        System.out.println("CONFIRMATION # The user has provided caption text :" + caption);
     };
 
     public void clickCreatePostButton() {
-        System.out.println("Some Action here");
+        wait.until(ExpectedConditions.visibilityOf(createP0ostButton));
+        createP0ostButton.click();
+        System.out.println("CONFIRMATION # The user has clicked on create post button");
     };
 }

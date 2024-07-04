@@ -4,73 +4,82 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 public class LoginPage extends ISkillo {
-
-    // 1 CONSTS
     public static final String LOGIN_PAGE_SUFIX = "users/login";
 
-    //2 UI MAP
-    //WEB elements
     @FindBy(css = "p.h4")
-    public WebElement loginPageHeaderTitle;
+    private WebElement loginPageHeaderTitle;
+    @FindBy(name = "usernameOrEmail")
+    private WebElement usernameInputField;
+    @FindBy(id = "defaultLoginFormPassword")
+    private WebElement passwordInputField;
+    @FindBy(xpath = "//span[contains(text(),'Remember me')]")
+    private WebElement rememberMeLabelText;
+    @FindBy(xpath = "//input[contains(@formcontrolname,'rememberMe')]")
+    private WebElement rememberMeCheckBox;
     @FindBy(id = "sign-in-button")
-    public WebElement loginFormSubmitButton;
+    private WebElement loginFormSubmitButton;
+    @FindBy(xpath = "//a[contains(.,'Register')]")
+    private WebElement loginFormRegistrationLink;
+    @FindBy(xpath = "//div[@class=\"toast-message ng-star-inserted\"]")
+    private WebElement popUpMsg;
 
-
-    //3 CONSTRUCTOR
     public LoginPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
-    }
-
-    //4 USER ACTIONS
+    };
 
     public void provideUserName(String userName) {
-
-        // To do
-        // Please use the common method created in Iskilo / Abstract Page Object or CommonPageObject(just a different name for some abstract class)
-    }
+        typeTextInField(usernameInputField, userName);
+    };
 
     public void providePassword(String userPassword) {
-        //TO do ->  some hint here
-        //  typeTextInField();
-    }
+        typeTextInField(passwordInputField, userPassword);
+    };
 
     public void clickSubmitButton() {
         waitAndClick(loginFormSubmitButton);
-    }
-
-    public void loginWithUserAndPassword() {
-        System.out.println("TO Do");
     };
 
-    //6 VERIFICATIONS
+    public void loginWithUserAndPassword(String userName, String password) {
+        provideUserName(userName);
+        providePassword(password);
+        clickSubmitButton();
+    };
+
     public void msgStatusAfterSubmitSuccessfulLogin() {
-        System.out.println("To do");
-        // To do a bit more advanced at the moment for you
-        // You can crate it a bit later whenever you have some more tme
+        String expectedMsgText = "Successful login!";
+        String msgText = popUpMsg.getText();
+        wait.until(ExpectedConditions.visibilityOf(popUpMsg));
+        Assert.assertEquals(msgText, expectedMsgText);
+    };
+
+    public void clickOnRegistrationLink(){
+        waitAndClick(loginFormRegistrationLink);
     }
 
     public void msgStatusAfterInvalidLogin() {
-        // To do a bit more advanced at the moment for you
-        // You can crate it a bit later whenever you have some more tme
-    }
+        String expectedMsgText = "Wrong username or password!";
+        String msgText = popUpMsg.getText();
+        wait.until(ExpectedConditions.visibilityOf(popUpMsg));
+        Assert.assertEquals(msgText, expectedMsgText);
+    };
 
     public void selectingRememberMeCheckBox() {
-        // To do a bit more advanced at the moment for you
-        // You can crate it a bit later whenever you have some more tme
-    }
+        rememberMeCheckBox.click();
+        System.out.println("Remember me is selected");
+    };
 
-    //OTHER SUPPORT METHODS
+    public boolean isLoginFormTitleShown() {
+        boolean isShown = false;
+        if (isTitleShown(loginPageHeaderTitle)) {
+            isShown = true;
+        }
 
-    public boolean isLoginTitleShown() {
-        //Some hints here with a method that is created in our ISkilopage
-
-        // return isTitleShown(loginPageHeaderTitle);
-        return false;
-    }
-
+        return  isShown;
+    };
 
 }
