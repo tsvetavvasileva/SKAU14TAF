@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class ContentGeneration {
 
-    public static String createUser() {
+        public static String createUser() {
 
         return new SimpleDateFormat("SSS").format(new Date()) + "Student";
     };

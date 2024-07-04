@@ -1,7 +1,6 @@
 package com.skilo.gui;
 
 import com.skillo.POM.*;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -23,7 +22,6 @@ public class EndToEndTest extends TestObject {
 
     @Test
     public void endToEndTest() {
-        System.out.println("\n _________________________________________________");
         System.out.println("=== > *** THE IS A END TO END SCENARIO  *** < ===");
 
         final String NEWUSERNAME = "PROVIDE YOUR OWN CREDS HERE";
@@ -51,13 +49,13 @@ public class EndToEndTest extends TestObject {
 
         System.out.println("RESULT: The Page is open and title is visible.");
 
-        System.out.println("STEP 3: Checking the place holders of the fields");
+        System.out.println("STEP 3: Checking the placeholders of the fields");
 
         System.out.println("STEP 4: Making a registration.");
 
         System.out.println("RESULT: The registration is successful.");
 
-        System.out.println("STEP 5: Checking that the user is log in after registration.");
+        System.out.println("STEP 5: Checking that the user is logged in after the registration.");
 
 
         //How to refactor this in a better way -> should we use const with the suffix and the base url
@@ -110,5 +108,5 @@ public class EndToEndTest extends TestObject {
         System.out.println("STEP 20: Deleting the new post");
 
         System.out.println("RESULT: The post is deleted");
-    };
+    }
 }

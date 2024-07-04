@@ -7,9 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-public class LoginPage extends ISkillo {
-    public static final String LOGIN_PAGE_SUFIX = "users/login";
 
+public class LoginPage extends ISkillo {
+    public static final String LOGIN_PAGE_SUFFIX = "users/login";
+
+    //WebElements or other  UI Map
     @FindBy(css = "p.h4")
     private WebElement loginPageHeaderTitle;
     @FindBy(name = "usernameOrEmail")
@@ -26,11 +28,18 @@ public class LoginPage extends ISkillo {
     private WebElement loginFormRegistrationLink;
     @FindBy(xpath = "//div[@class=\"toast-message ng-star-inserted\"]")
     private WebElement popUpMsg;
+    @FindBy(tagName = "h2")
+    private WebElement userNameTag;
 
     public LoginPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
-    };
+    }
+
+    //    User Actions
+    public void openLoginPage() {
+        navigateTo(LOGIN_PAGE_SUFFIX);
+    }
 
     public void provideUserName(String userName) {
         typeTextInField(usernameInputField, userName);
@@ -42,12 +51,34 @@ public class LoginPage extends ISkillo {
 
     public void clickSubmitButton() {
         waitAndClick(loginFormSubmitButton);
+
+        waitPageTobeFullLoaded();
     };
+
+    public void confirmVisibilityOfrememberMeLabelText () {
+        wait.until(ExpectedConditions.visibilityOf(rememberMeLabelText));
+
+        waitPageTobeFullLoaded();
+    }
+
+    public void markRememberMeCheckbox() {
+        waitAndClick(rememberMeCheckBox);
+        System.out.println("Remember me is selected.");
+    };
+
+    public void verifyLoginPageUrlIsCorrect () {
+        wait.until(ExpectedConditions.urlContains("http://training.skillo-bg.com:4200/users/login"));
+    }
+
+//    public void main() {
+//        verifyLoginPageUrlIsCorrect();
+//    }
 
     public void loginWithUserAndPassword(String userName, String password) {
         provideUserName(userName);
         providePassword(password);
         clickSubmitButton();
+        markRememberMeCheckbox();
     };
 
     public void msgStatusAfterSubmitSuccessfulLogin() {
@@ -61,17 +92,27 @@ public class LoginPage extends ISkillo {
         waitAndClick(loginFormRegistrationLink);
     }
 
-    public void msgStatusAfterInvalidLogin() {
-        String expectedMsgText = "Wrong username or password!";
+    //Asserts
+    public void msgStatusAfterInvalidLoginWithWrongPassword() {
+        String expectedMsgText = "Invalid username or password"; //should be "Invalid username or password" but the actual message says "ivalid password" (to log bug)
         String msgText = popUpMsg.getText();
         wait.until(ExpectedConditions.visibilityOf(popUpMsg));
         Assert.assertEquals(msgText, expectedMsgText);
     };
 
-    public void selectingRememberMeCheckBox() {
-        rememberMeCheckBox.click();
-        System.out.println("Remember me is selected");
+    public void msgStatusAfterInvalidLoginWithWrongUsername() {
+        String expectedMsgText2 = "User not found";
+        String msgText = popUpMsg.getText();
+        wait.until(ExpectedConditions.visibilityOf(popUpMsg));
+        Assert.assertEquals(msgText, expectedMsgText2);
     };
+
+    public void msgStatusAfterInvalidLoginWithEmptyData() {
+        String expectedMsgText3 = "User not found";
+        String msgText = popUpMsg.getText();
+        wait.until(ExpectedConditions.visibilityOf(popUpMsg));
+        Assert.assertEquals(msgText, expectedMsgText3);
+    }
 
     public boolean isLoginFormTitleShown() {
         boolean isShown = false;
@@ -82,4 +123,13 @@ public class LoginPage extends ISkillo {
         return  isShown;
     };
 
+    public void isUserNameDisplayed (String expectedUserNameIsDisplayed) {
+        wait.until(ExpectedConditions.urlContains("http://training.skillo-bg.com:4200/users/"));
+        wait.until(ExpectedConditions.visibilityOf(userNameTag));
+        String username = userNameTag.getText();
+        Assert.assertEquals(username, userNameTag.getText(), "The username is different than expected.");
+
+        System.out.println("Username is displayed.");
+
+    }
 }

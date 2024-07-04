@@ -16,11 +16,12 @@ public class ISkillo {
 
     public ISkillo(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     };
 
-    public void navigateTo(String pageURLsufix) {
-        String currentURL = BASE_URL + pageURLsufix;
+    public void navigateTo(String pageURLsuffix) {
+        String currentURL = BASE_URL + pageURLsuffix;
+        System.out.println(currentURL+ " " + ("this is the current url"));
         driver.get(currentURL);
 
         waitPageTobeFullLoaded();
@@ -31,7 +32,7 @@ public class ISkillo {
         wait.until(ExpectedConditions.elementToBeClickable(element));
 
         element.click();
-        System.out.println("The user has clicked on element");
+        System.out.println("The user has clicked on element.");
 
         waitPageTobeFullLoaded();
     };
@@ -49,7 +50,7 @@ public class ISkillo {
     public void waitPageTobeFullLoaded() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("return document.readyState").equals("complete");
-        System.out.println("DOM tree is fully loaded");
+        System.out.println("DOM tree is fully loaded.");
     };
 
     public boolean isUrlLoaded(String pageURL) {
@@ -62,25 +63,25 @@ public class ISkillo {
         return element.getAttribute("placeholder");
     };
 
-    public boolean isPlaceholderCorrect(WebElement element, String expectedPlaceholder) {
-        try {
-            String actualPlaceholder = getPlaceholder(element);
-            return expectedPlaceholder.equals(actualPlaceholder);
-        } catch (NoSuchElementException e) {
-             System.out.println("ERROR! The placeholder for the element is not correct or element is not found.");
-            return false;
-        }
-    };
+//    public boolean isPlaceholderCorrect(WebElement element, String expectedPlaceholder) {
+//        try {
+//            String actualPlaceholder = getPlaceholder(element);
+//            return expectedPlaceholder.equals(actualPlaceholder);
+//        } catch (NoSuchElementException e) {
+//             System.out.println("ERROR! The placeholder for the element is not correct or element is not found.");
+//            return false;
+//        }
+//    };
 
     public boolean isTitleShown(WebElement element) {
         boolean isTitleShown = false;
-         System.out.println("ACTION @ The user is verifying if the Registration title is shown");
+         System.out.println("ACTION @ The user is verifying if the Registration title is shown.");
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
-             System.out.println("CONFIRM # The Registration title is shown to the user");
+             System.out.println("CONFIRM # The Registration title is shown to the user.");
             isTitleShown = true;
         } catch (NoSuchElementException e) {
-             System.out.println("ERROR ! The title is not presented the user is not on Registration page");
+             System.out.println("ERROR ! The title is not presented the user is not on Registration page.");
         }
         return isTitleShown;
     };
