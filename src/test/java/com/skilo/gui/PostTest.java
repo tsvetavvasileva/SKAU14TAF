@@ -73,7 +73,7 @@ public class PostTest extends TestObject{
 
         //Iframe / PostModal / ShadowDom - error here with the switch to iframe locator
         getWebDriver().switchTo().frame(" ??? ");
-        System.out.println(" STEP 12: Verifying that the image and Username are visible.");
+        System.out.println("STEP 12: Verifying that the image and Username are visible.");
         Assert.assertTrue(postModal.isImageVisible(), "The image is visible!");
         Assert.assertEquals(postModal.getPostUser(), username);
 
@@ -87,7 +87,7 @@ public class PostTest extends TestObject{
 
         //Iframe / PostModal / ShadowDom - most probably error here with the switch to iframe locator
         getWebDriver().switchTo().frame(" ??? ");
-        System.out.println(" STEP 15: The user has deleted the new post so this test can be repeated.");
+        System.out.println("STEP 15: The user has deleted the new post so this test can be repeated.");
         postModal.clickOnBinIcon();
         postModal.confirmDeletingPost();
 
