@@ -48,14 +48,10 @@ ISkillo has enabled this magical instant access to information and communication
 
 
 - **Post feature**:
-    - Verify a logged user can successfully create a new post and delete the new post after that.
+    - Verify a logged user can successfully navigate to their Profile Page, create a new post and delete the new post after that.
 
-
+  
 - **Profile feature**:
-  - Verify an already registered user can successfully navigate to their Profile Page after successfully logging in with their valid credentials.
-
-
-- **Profile feature 2**:
   - Verify a logged user can successfully upload a new profile picture.
 
 ## Installation

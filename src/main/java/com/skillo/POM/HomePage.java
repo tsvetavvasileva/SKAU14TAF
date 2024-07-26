@@ -13,20 +13,19 @@ public class HomePage extends ISkillo {
     public static final String HOME_PAGE_SUFFIX = "posts/all";
 
     @FindBy(id = "nav-link-login")
-    public WebElement navigationLoginButton; // = driver.findElement(By.id("nav-link-login"));
+    public WebElement navigationLoginButton;
     @FindBy(id = "nav-link-new-post")
     private WebElement navigationNewPostButton;
     @FindBy(xpath = "//i[@class='fas fa-sign-out-alt fa-lg']")
     private WebElement navigationLogOutButton;
-//    @FindBy(id = "nav-link-home")
-//    private WebElement navigationHomeButton;
     @FindBy(id = "nav-link-profile")
     private WebElement navigationProfileLink;
+
 
     public HomePage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
-    };
+    }
 
     public void openHomePage() {
         navigateTo(HOME_PAGE_SUFFIX);
@@ -36,17 +35,11 @@ public class HomePage extends ISkillo {
         wait.until(ExpectedConditions.urlContains("http://training.skillo-bg.com:4200/posts/all"));
     }
 
-//    public void main() {
-//        verifyHomePageUrlIsCorrect();
-//    }
 
     public void clickOnNavigationLoginButton() {
         waitAndClick(navigationLoginButton);
-    };
+    }
 
-//    public void  clickOnNavigationHomeButton() {
-//        waitAndClick(navigationHomeButton);
-//    }
 
     public void confirmVisibilityOfProfileLink () {
         wait.until(ExpectedConditions.elementToBeClickable(( By.id("nav-link-profile"))));
@@ -56,11 +49,11 @@ public class HomePage extends ISkillo {
 
     public void clickOnNewPostButton() {
         waitAndClick(navigationNewPostButton);
-    };
+    }
 
     public void clickOnLogOutButton() {
         waitAndClick(navigationLogOutButton);
-    };
+    }
 
     public boolean isNewPostButtonToShown() {
         boolean isButtonShown = false;
@@ -73,7 +66,7 @@ public class HomePage extends ISkillo {
             System.out.println("ERROR ! The navigation New Post button was not presented to the user");
         }
         return isButtonShown;
-    };
+    }
 
     public boolean isLogOutButtonShown() {
         boolean isButtonShown = false;
@@ -86,5 +79,5 @@ public class HomePage extends ISkillo {
             System.out.println("ERROR ! The navigation logout button was not presented to the user.");
         }
         return isButtonShown;
-    };
+    }
 }

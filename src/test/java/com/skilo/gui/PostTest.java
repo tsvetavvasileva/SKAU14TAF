@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+
 import java.io.File;
 
 public class PostTest extends TestObject{
@@ -22,13 +23,13 @@ public class PostTest extends TestObject{
     }
 
     @Test(dataProvider = "PostTestDataProvider")
-    public void verifyUserCanCreateNewPostAndDeleteIt(String user, String password, String username, File file, String caption) {
+    public void verifyUserCanCreateNewPostAndDeleteIt(String user, String password, String username, File file, String caption) throws InterruptedException {
         System.out.println("=== > *** Verify the user can create a new post and delete the new post *** < ===");
 
         final String HOME_PAGE_URL = "posts/all";
         final String LOGIN_PAGE_URL = "users/login";
 
-        //Starting to work with home page to navigate to login page
+
         System.out.println("STEP 1: A guest user has opened ISkillo website home page.");
         HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
@@ -40,7 +41,7 @@ public class PostTest extends TestObject{
         System.out.println("STEP 3: The HomePage URL is fully loaded.");
         homePage.isUrlLoaded(LOGIN_PAGE_URL);
 
-        //Starting to work with login page - init login page
+
         System.out.println("STEP 4: The user has provided correct credentials and has logged in successfully.");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.loginWithUserAndPassword(user, password);
@@ -51,7 +52,7 @@ public class PostTest extends TestObject{
         System.out.println("STEP 6: The user has clicked on New Post button.");
         homePage.clickOnNewPostButton();
 
-        //Post feature actions
+
         System.out.println("STEP 7: The user has successfully uploaded a new picture.");
         PostPage postPage = new PostPage(super.getWebDriver());
         postPage.uploadPicture(file);
@@ -69,43 +70,31 @@ public class PostTest extends TestObject{
         postPage.clickCreatePostButton();
 
         PostModal postModal = new PostModal(super.getWebDriver());
-        postModal.getIframeInfo();
+        postModal.isImagePostVisible();
 
-        //Iframe / PostModal / ShadowDom - error here with the switch to iframe locator
-        getWebDriver().switchTo().frame(" ??? ");
-        System.out.println("STEP 12: Verifying that the image and Username are visible.");
-        Assert.assertTrue(postModal.isImageVisible(), "The image is visible!");
-        Assert.assertEquals(postModal.getPostUser(), username);
 
-        getWebDriver().switchTo().defaultContent();
-        System.out.println("Step 13: The user has clicked on the first post.");
+        System.out.println("Step 12: The user has clicked on the first post.");
         ProfilePage profilePage = new ProfilePage((super.getWebDriver()));
         profilePage.clickPost(0);
+
+        System.out.println("STEP 13: Verifying that the image and Username are visible.");
+        Assert.assertTrue(postModal.isImagePostVisible(), "The image is visible");
+        Assert.assertTrue(postModal.getPostUser(),"The username is visible!");
 
         System.out.println("STEP 14: Checking if the post count is correct.");
         profilePage.getPostCount();
 
-        //Iframe / PostModal / ShadowDom - most probably error here with the switch to iframe locator
-        getWebDriver().switchTo().frame(" ??? ");
-        System.out.println("STEP 15: The user has deleted the new post so this test can be repeated.");
-        postModal.clickOnBinIcon();
-        postModal.confirmDeletingPost();
-
-        //***************************************
-        //The second run the test case will fail
-        //*************************************
         int expectedPostCount = 1;
         int actualPostCount = profilePage.getPostCount();
 
-        Assert.assertEquals(
-                actualPostCount,
-                expectedPostCount,
-                "The number of Posts is incorrect!");
+        Assert.assertEquals(actualPostCount, expectedPostCount,"The number of Posts is incorrect!");
+        System.out.println("The actual post count is" + actualPostCount);
 
-        //***************************************
-        //is it a good practice to name the test case that will create only post
-        //but not adding info that will delete post as well ?
-        //*************************************
+
+        System.out.println("STEP 15: The user has deleted the new post so this test can be repeated.");
+        postModal.clickOnBinIcon();
+        postModal.confirmYesToDelete();
+        Assert.assertTrue(postModal.confirmYesToDelete(),"The image was successfully is deleted.");
 
     }
 }

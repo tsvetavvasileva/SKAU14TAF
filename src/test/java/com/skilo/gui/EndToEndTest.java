@@ -7,18 +7,10 @@ import java.io.File;
 
 public class EndToEndTest extends TestObject {
 
-    /* ***************************************
-        The test case will fail if you are not providing a picture with file name testImg.jpg
-        you have to navigate to
-        1. SRC (root directory )
-        1.1. Go to "test" folder
-        1.2. After that open "java"
-        1.3. Nxt open "resources"
-        1.4. Over there you have to provide picture testImg or 6420.jpeg
-       ***************************************
-    */
+
     File postPicture = new File("src\\test\\resources\\uploads\\testImg.jpg");
     String caption = "Testing create post caption";
+
 
     @Test
     public void endToEndTest() {
@@ -29,19 +21,10 @@ public class EndToEndTest extends TestObject {
         final String REGPASSWORD = "PROVIDE YOUR OWN CREDS HERE";
         final String CONFIRMPASSWORD = "PROVIDE YOUR OWN CREDS HERE";
 
-        /*
-         ***************************************
-         Do we need to start with the registration of a new user
-         Should we keep the new username , password , email data
-         So we can proceed with the next steps
-         Or even more can we print the data so when we read the logs from the run
-         we can try to follow the script if needed for debugging
-        ***************************************
-         */
 
         HomePage homePage = new HomePage(super.getWebDriver());
         System.out.println();
-        System.out.println("STEP 1: Open iSkilo site.");
+        System.out.println("STEP 1: Open iSkillo site.");
         homePage.openHomePage();
         System.out.println("Result: The website is open.");
 
@@ -58,15 +41,8 @@ public class EndToEndTest extends TestObject {
         System.out.println("STEP 5: Checking that the user is logged in after the registration.");
 
 
-        //How to refactor this in a better way -> should we use const with the suffix and the base url
-        //Can we create a getBaseUrlMethod in ISkilo
         homePage.isUrlLoaded("http://training.skillo-bg.com:4200/posts/all");
 
-        //***************************************
-        //        System.out.println("STEP:6 Login out");
-        //        homePage.clickOnLogOutButton();
-        //        System.out.println("RESULT: The user is log out");
-        //***************************************
 
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         System.out.println("STEP 7: Verify that the user is on login page.");
@@ -83,11 +59,6 @@ public class EndToEndTest extends TestObject {
 
         System.out.println("STEP 13: Navigating to \"New post\".");
 
-        //***************************************
-        //Missing page object initialization
-        //How to init a class -. MyClass myclass = new MyClass(super.rakia);
-        //Init new PostPageObject here
-        //***************************************
 
         System.out.println("STEP 14: Upload new post picture.");
 
@@ -99,9 +70,6 @@ public class EndToEndTest extends TestObject {
 
         System.out.println("STEP 18: Open the new post.");
 
-        //***************************************
-        //init PostModalPage here
-        //***************************************
 
         System.out.println("STEP 19: Verifying that the image is visible and the username is correct.");
 
@@ -109,4 +77,5 @@ public class EndToEndTest extends TestObject {
 
         System.out.println("RESULT: The post is deleted");
     }
+
 }

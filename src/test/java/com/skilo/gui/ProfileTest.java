@@ -1,39 +1,58 @@
 package com.skilo.gui;
 
 import com.skillo.POM.*;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.io.File;
+
 
 public class ProfileTest extends TestObject {
 
-    @Test
-    public void verifyUserCanNavigateToProfilePage () {
-        System.out.println("STEP 1: A guest user has opened the ISkillo HomePage.");
+    @DataProvider(name = "PostTestDataProvider")
+    public Object[][] getUsers() {
+        File postPicture = new File("src\\test\\resources\\uploads\\testUpload.jpg");
+        String caption = "Testing create post caption";
+
+        Object[][] objects = {{
+                "testingDemos", "testing",
+                "testingDemos", postPicture, caption},
+        };
+        return objects;
+    }
+
+    @Test(dataProvider = "PostTestDataProvider")
+    public void verifyUserCanPostProfilePicture (String user, String password, String username, File file, String caption) throws InterruptedException {
+
+        final String HOME_PAGE_URL = "posts/all";
+        final String LOGIN_PAGE_URL = "users/login";
+
+        System.out.println("STEP 1: A guest user has opened ISkillo website home page.");
         HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
+        homePage.isUrlLoaded(HOME_PAGE_URL);
 
-        System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
+        System.out.println("STEP 2: The user has clicked on Login button.");
+        homePage.clickOnNavigationLoginButton();
+
+        System.out.println("STEP 3: The HomePage URL is fully loaded.");
+        homePage.isUrlLoaded(LOGIN_PAGE_URL);
+
+
+        System.out.println("STEP 4: The user has provided correct credentials and has logged in successfully.");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
-        loginPage.openLoginPage();
-        loginPage.verifyLoginPageUrlIsCorrect();
+        loginPage.loginWithUserAndPassword(user, password);
 
-        loginPage.provideUserName("tsveta.v");
-        System.out.println("STEP 3: The user has provided a valid username.");
-
-        loginPage.providePassword("123Abc");
-        System.out.println("STEP 4: The user has provided a valid password.");
-
-        loginPage.clickSubmitButton();
-        System.out.println("STEP 5: The user has clicked on the Sign in button.");
-
-        System.out.println("STEP 6: The user is successfully logged in the system with valid credentials.");
-        homePage.isLogOutButtonShown();
-        loginPage.msgStatusAfterSubmitSuccessfulLogin();
+        System.out.println("STEP 5: The user has verified the Profile Link is visible.");
+        System.out.println("STEP 6: The user has clicked on Profile Link.");
         homePage.confirmVisibilityOfProfileLink();
 
-        System.out.println("STEP 7: The user has successfully clicked on Profile link and has opened ProfilePage.");
-        ProfilePage profilePage = new ProfilePage(super.getWebDriver());
-        profilePage.openProfilePage();
+        System.out.println("STEP 7: The user has successfully uploaded a new Profile picture.");
+        ProfilePage profilePage = new ProfilePage(super.getWebDriver()); // error here !!
+        profilePage.uploadProfilePic(file);
+
         profilePage.isProfilePicDisplayed();
+        System.out.println("STEP 8: Checking if the image is visible after upload.");
 
     }
 

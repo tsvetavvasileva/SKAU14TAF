@@ -27,7 +27,7 @@ public class PostPage extends ISkillo {
     public PostPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
-    };
+    }
 
     public boolean isImageVisible() {
         boolean isVisible;
@@ -38,30 +38,31 @@ public class PostPage extends ISkillo {
             e.printStackTrace();
             System.out.println("ERROR: The file is not visible.");
             isVisible = false;
-        };
+        }
         return isVisible;
-    };
+    }
 
     public String getImageName() {
         String imageName = imageTextElement.getAttribute("placeholder");
         System.out.println("CONFIRMATION# The image name is: " + imageName);
         return imageName;
-    };
+    }
 
     public void uploadPicture(File file) {
         uploadField.sendKeys(file.getAbsolutePath());
         System.out.println("CONFIRMATION# The file was successfully uploaded.");
-    };
+    }
 
     public void providePostCaption(String caption) {
         wait.until(ExpectedConditions.visibilityOf(captionElement));
         captionElement.sendKeys(caption);
         System.out.println("CONFIRMATION# The user has provided caption text:" + caption);
-    };
+    }
 
     public void clickCreatePostButton() {
         wait.until(ExpectedConditions.visibilityOf(createPostButton));
         createPostButton.click();
         System.out.println("CONFIRMATION# The user has clicked on submit post button.");
     }
+
 }

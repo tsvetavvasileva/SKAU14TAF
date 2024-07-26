@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends TestObject {
 
+
     @Test
     public void verifyAlreadyRegisteredUserCanSuccessfullyLogin() throws InterruptedException {
         System.out.println("=== > *** Verify a registered user can successfully login in the system with valid credentials *** < ===");
@@ -17,8 +18,7 @@ public class LoginTest extends TestObject {
         System.out.println("STEP 1: A guest user has opened the ISkillo HomePage.");
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
-       //We need to verify that the user is on the Home page - done
-        // We can check examples in lecture 15 for further assistance
+
 
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
         homePage.clickOnNavigationLoginButton();
@@ -28,8 +28,7 @@ public class LoginTest extends TestObject {
         loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
-        //We need to do some verifications here - done
-        //How about checking Lecture 14/15 and get verification by url contains ?
+
 
         System.out.println("STEP 4: The user has provided a valid username.");
         loginPage.provideUserName(USERNAME);
@@ -38,7 +37,7 @@ public class LoginTest extends TestObject {
         loginPage.providePassword(PASSWORD);
 
         System.out.println("STEP 6: The guest user has selected Remember me option.");
-        loginPage.confirmVisibilityOfrememberMeLabelText();
+        loginPage.confirmVisibilityOfRememberMeLabelText();
         loginPage.markRememberMeCheckbox();
 
         System.out.println("STEP 7: The user has clicked on the Sign in button.");
@@ -51,11 +50,7 @@ public class LoginTest extends TestObject {
         System.out.println("STEP 9: The user has successfully clicked on HomePage Profile link after logging in the system with valid data.");
         loginPage.isUserNameDisplayed("Username is displayed.");
 
-        //This test case needs a final assertion - done
-        //How should we verify that the user is logged in
-        //1 Can we verify the url that contains the user id ?
-        //2. Can we check on profile page that the username matches the user with the related credentials ?
-        //3. What else can we try to check in order to confirm that the user is successfully login (successful login msg?)
+
     }
 
     @Test
@@ -70,8 +65,7 @@ public class LoginTest extends TestObject {
         System.out.println("STEP 1: A guest user has opened the ISkillo HomePage.");
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
-        //We need to verify that the user is on the Home page - done
-        // We can check examples in lecture 15 for further assistance
+
 
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
         homePage.clickOnNavigationLoginButton();
@@ -81,8 +75,7 @@ public class LoginTest extends TestObject {
         loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
-        //We need to do some verifications here - done
-        //How about checking Lecture 14/15 and get verification by url contains ?
+
 
         System.out.println("STEP 4: The user has provided a valid username.");
         loginPage.provideUserName(USERNAME);
@@ -91,7 +84,7 @@ public class LoginTest extends TestObject {
         loginPage.providePassword(PASSWORD);
 
         System.out.println("STEP 6: The guest user has selected Remember me option.");
-        loginPage.confirmVisibilityOfrememberMeLabelText();
+        loginPage.confirmVisibilityOfRememberMeLabelText();
         loginPage.markRememberMeCheckbox();
 
         System.out.println("STEP 7: The user has clicked on the Sign in button.");
@@ -121,8 +114,7 @@ public class LoginTest extends TestObject {
         System.out.println("STEP 1: A guest user has opened the ISkillo HomePage.");
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
-        //We need to verify that the user is on the Home page - done
-        // We can check examples in lecture 15 for further assistance
+
 
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
         homePage.clickOnNavigationLoginButton();
@@ -132,8 +124,7 @@ public class LoginTest extends TestObject {
         loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
-        //We need to do some verifications here - done
-        //How about checking Lecture 14/15 and get verification by url contains ?
+
 
         System.out.println("STEP 4: The user has provided a valid username.");
         loginPage.provideUserName(USERNAME);
@@ -148,11 +139,7 @@ public class LoginTest extends TestObject {
         loginPage.msgStatusAfterInvalidLoginWithWrongPassword();
         loginPage.verifyLoginPageUrlIsCorrect();
 
-        //This test case needs a final assertion - done
-        //How should we verify that the user is logged in or not ?
-        //1 Can we verify the url that contains the user id is not shown ?
-        //2. Can we check on profile cannot be opened when not longed-in ?
-        //3. What else can we try to check in order to confirm that the user is successfully login (not successful login msg?)
+
     }
 
     @Test
@@ -167,8 +154,7 @@ public class LoginTest extends TestObject {
         System.out.println("STEP 1: A guest user has opened the ISkillo HomePage.");
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
-        //We need to verify that the user is on the Home page - done
-        // We can check examples in lecture 15 for further assistance
+
 
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
         homePage.clickOnNavigationLoginButton();
@@ -178,8 +164,7 @@ public class LoginTest extends TestObject {
         loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
-        //We need to do some verifications here - done
-        //How about checking Lecture 14/15 and get verification by url contains ?
+
 
         System.out.println("STEP 4: The user has provided a wrong username.");
         loginPage.provideUserName(USERNAME);
@@ -194,29 +179,23 @@ public class LoginTest extends TestObject {
         loginPage.msgStatusAfterInvalidLoginWithWrongUsername();
         loginPage.verifyLoginPageUrlIsCorrect();
 
-        //This test case needs a final assertion - done
-        //How should we verify that the user is logged in or not ?
-        //1 Can we verify the url that contains the user id is not shown ?
-        //2. Can we check on profile cannot be opened when not longed-in ?
-        //3. What else can we try to check in order to confirm that the user is successfully login (not successful login msg?)
     }
 
     @Test
     public void verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials() throws InterruptedException {
         System.out.println("=== > *** Verify a user cannot successfully login in the system with NO CREDENTIALS *** < ===");
 
-        final String USERNAME = ". "; //empty or one dot provided for login info
-        final String PASSWORD = " "; //
+        final String USERNAME = ". ";
+        final String PASSWORD = " ";
 
         HomePage homePage = new HomePage(super.getWebDriver());
 
         System.out.println("STEP 1: A guest user has open the ISkillo HomePage.");
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
-        //We need to verify that the user is on the Home page - done
-        // We can check examples in lecture 15 for further assistance
 
-        System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPagel");
+
+        System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
         homePage.clickOnNavigationLoginButton();
 
         System.out.println("STEP 3: The guest user has verified that the LoginPage is opened as per requirements.");
@@ -224,8 +203,7 @@ public class LoginTest extends TestObject {
         loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
-        //We need to do some verifications here - done
-        //How about checking Lecture 14/15 and get verification by url contains ?
+
 
         System.out.println("STEP 4: The user has provided an empty username.");
         loginPage.provideUserName(USERNAME);
@@ -241,11 +219,7 @@ public class LoginTest extends TestObject {
         loginPage.msgStatusAfterInvalidLoginWithEmptyData();
         loginPage.verifyLoginPageUrlIsCorrect();
 
-        //This test case needs a final assertion - done
-        //How should we verify that the user is logged in or not ?
-        //1 Can we verify the url that contains the user id is not shown ?
-        //2. Can we check on profile cannot be opened when not longed-in ?
-        //3. What else can we try to check in order to confirm that the user is successfully login (not successful login msg?)
+
     }
 
 }

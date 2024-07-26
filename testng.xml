@@ -24,11 +24,6 @@
             </class>
             <class name="com.skilo.gui.ProfileTest">
                 <methods>
-                    <include name="verifyUserCanNavigateToProfilePage"/>
-                </methods>
-            </class>
-            <class name="com.skilo.gui.ProfileTest2">
-                <methods>
                     <include name="verifyUserCanPostProfilePicture"/>
                 </methods>
             </class>

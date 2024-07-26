@@ -1,6 +1,5 @@
 package com.skillo.POM;
 
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +11,7 @@ import org.testng.Assert;
 public class RegistrationPage extends ISkillo {
     public static final String REGISTER_PAGE_SUFFIX = "users/register";
 
-    //WebElements or other  UI Map
+
     @FindBy(xpath = "/html/body/app-root/div[2]/app-register/div/div/form/h4")
     private WebElement registerPageHeaderTitle;
     @FindBy(xpath = "/html/body/app-root/div[2]/app-register/div/div/form/div[1]/input")
@@ -30,17 +29,13 @@ public class RegistrationPage extends ISkillo {
     @FindBy(xpath = "//div[@class=\"toast-bottom-right toast-container\"]")
     private WebElement popUpMsg;
 
+
     public RegistrationPage (WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
 
-//    User Actions
-//    public void openHRegistrationPage() {
-//        navigateTo(REGISTER_PAGE_SUFFIX);
-//    }
 
-    //User Actions
     public void confirmVisibilityOfRegisterPageHeaderTitle () {
         wait.until(ExpectedConditions.visibilityOf(registerPageHeaderTitle));
 
@@ -67,13 +62,13 @@ public class RegistrationPage extends ISkillo {
         waitAndClick(registrationSignInButton);
     }
 
-    //Asserts
-    public void msgStatusAfterSubmitUnsuccessfullRegistration() {
+
+    public void msgStatusAfterSubmitUnsuccessfulRegistration () {
         String expectedMsgText = "Registration failed!";
         String msgText = popUpMsg.getText();
         wait.until(ExpectedConditions.visibilityOf(popUpMsg));
         Assert.assertEquals(msgText, expectedMsgText);
-    };
+    }
 
     public void fullRegistrationInputsAndActions (String username, String email, String password) {
         provideUsername(username);
@@ -83,11 +78,6 @@ public class RegistrationPage extends ISkillo {
         clickOnSignInButton();
     }
 
-    //Getters
-//    public String isUserNamePlaceHolderCorrect () {
-//        wait.until(ExpectedConditions.visibilityOf(usernameInputField));
-//        return usernameInputField.getAttribute("value");
-//    }
 
     public boolean isUserNameDisplayed (String expectedUserNameIsDisplayed) {
         wait.until(ExpectedConditions.urlContains("http://training.skillo-bg.com:4200/users/"));
@@ -100,20 +90,7 @@ public class RegistrationPage extends ISkillo {
         return false;
     }
 
-//    public boolean isUserNamePlaceHolderCorrect(String expectedUserNamePlaceHolder) {
-//        boolean isPerRequirements = false;
-//        try {
-//            String actualUserNamePlaceHolder = isUserNamePlaceHolderCorrect();
-//            isPerRequirements = expectedUserNamePlaceHolder.equals(actualUserNamePlaceHolder);
-//
-//        }catch (NoSuchElementException e){
-//            System.out.println("ERROR ! The username placeHolder is not correct");
-//            isPerRequirements = false;
-//        }
-//        return isPerRequirements;
-//    }
-
-    }
+}
 
 
 

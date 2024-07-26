@@ -11,7 +11,7 @@ import org.testng.Assert;
 public class LoginPage extends ISkillo {
     public static final String LOGIN_PAGE_SUFFIX = "users/login";
 
-    //WebElements or other  UI Map
+
     @FindBy(css = "p.h4")
     private WebElement loginPageHeaderTitle;
     @FindBy(name = "usernameOrEmail")
@@ -36,26 +36,25 @@ public class LoginPage extends ISkillo {
         PageFactory.initElements(driver, this);
     }
 
-    //    User Actions
     public void openLoginPage() {
         navigateTo(LOGIN_PAGE_SUFFIX);
     }
 
     public void provideUserName(String userName) {
         typeTextInField(usernameInputField, userName);
-    };
+    }
 
     public void providePassword(String userPassword) {
         typeTextInField(passwordInputField, userPassword);
-    };
+    }
 
     public void clickSubmitButton() {
         waitAndClick(loginFormSubmitButton);
 
         waitPageTobeFullLoaded();
-    };
+    }
 
-    public void confirmVisibilityOfrememberMeLabelText () {
+    public void confirmVisibilityOfRememberMeLabelText () {
         wait.until(ExpectedConditions.visibilityOf(rememberMeLabelText));
 
         waitPageTobeFullLoaded();
@@ -64,48 +63,45 @@ public class LoginPage extends ISkillo {
     public void markRememberMeCheckbox() {
         waitAndClick(rememberMeCheckBox);
         System.out.println("Remember me is selected.");
-    };
+    }
 
     public void verifyLoginPageUrlIsCorrect () {
         wait.until(ExpectedConditions.urlContains("http://training.skillo-bg.com:4200/users/login"));
     }
 
-//    public void main() {
-//        verifyLoginPageUrlIsCorrect();
-//    }
 
     public void loginWithUserAndPassword(String userName, String password) {
         provideUserName(userName);
         providePassword(password);
         clickSubmitButton();
         markRememberMeCheckbox();
-    };
+    }
 
     public void msgStatusAfterSubmitSuccessfulLogin() {
         String expectedMsgText = "Successful login!";
         String msgText = popUpMsg.getText();
         wait.until(ExpectedConditions.visibilityOf(popUpMsg));
         Assert.assertEquals(msgText, expectedMsgText);
-    };
+    }
 
     public void clickOnRegistrationLink(){
         waitAndClick(loginFormRegistrationLink);
     }
 
-    //Asserts
+
     public void msgStatusAfterInvalidLoginWithWrongPassword() {
-        String expectedMsgText = "Invalid username or password"; //should be "Invalid username or password" but the actual message says "ivalid password" (to log bug)
+        String expectedMsgText = "Invalid username or password";
         String msgText = popUpMsg.getText();
         wait.until(ExpectedConditions.visibilityOf(popUpMsg));
         Assert.assertEquals(msgText, expectedMsgText);
-    };
+    }
 
     public void msgStatusAfterInvalidLoginWithWrongUsername() {
         String expectedMsgText2 = "User not found";
         String msgText = popUpMsg.getText();
         wait.until(ExpectedConditions.visibilityOf(popUpMsg));
         Assert.assertEquals(msgText, expectedMsgText2);
-    };
+    }
 
     public void msgStatusAfterInvalidLoginWithEmptyData() {
         String expectedMsgText3 = "User not found";
@@ -121,7 +117,7 @@ public class LoginPage extends ISkillo {
         }
 
         return  isShown;
-    };
+    }
 
     public void isUserNameDisplayed (String expectedUserNameIsDisplayed) {
         wait.until(ExpectedConditions.urlContains("http://training.skillo-bg.com:4200/users/"));

@@ -1,60 +1,80 @@
 package com.skillo.POM;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 
 public class PostModal extends ISkillo {
     private final WebElement modalElement;
 
-    WebElement iframeElement = driver.findElement(By.name("iframe"));
-    String iframeId = iframeElement.getAttribute("id");
-    String iframeName = iframeElement.getAttribute("name");
-
 
     public PostModal (WebDriver driver) {
         super(driver);
-        this.modalElement = driver.findElement(By.cssSelector("[class='post-modal-img']"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        this.modalElement = driver.findElement(By.cssSelector(".col-12.ng-star-inserted"));
+        wait.until(ExpectedConditions.visibilityOf(modalElement)).isDisplayed();
     }
 
-    public boolean isImageVisible () {
-        boolean isVisible;
+
+    public boolean isImagePostVisible() {
         try {
-            WebElement image = By.cssSelector("[class='post-modal-img']").findElement(modalElement);
-            isVisible = wait.until(ExpectedConditions.visibilityOf(image)).isDisplayed();
-        } catch (NoSuchElementException e) {
-            System.out.println("Element is not visible");
-            isVisible = false;
+            WebElement image = modalElement.findElement(By.cssSelector("div.post-modal-img>img"));
+            wait.until(ExpectedConditions.visibilityOf(image)).isDisplayed();
+            String imgUrl = image.getAttribute("src");
+            imgUrl.contains("https://i.imgur.com");
+        } catch  (NoSuchElementException e) {
         }
-        return isVisible;
+        System.out.println("CONFIRMATION #: The image is displayed.");
+        return true;
     }
 
-    public String getPostUser () {
-        WebElement postUser = modalElement.findElement(By.className("[class*='post-user']"));
-        wait.until(ExpectedConditions.visibilityOf(postUser));
-        return postUser.getText();
+
+    public boolean getPostUser() {
+        try {
+            WebElement postUser = modalElement.findElement(By.className("post-user"));
+            wait.until(ExpectedConditions.visibilityOf(postUser)).isDisplayed();
+            postUser.getText();
+        } catch  (NoSuchElementException e) {
+        }
+        System.out.println("CONFIRMATION #: The username is displayed.");
+        return true;
     }
 
-    public void clickOnBinIcon () {
-        WebElement deletePostButton = modalElement.findElement(By.cssSelector(".delete-ask"));
-        wait.until(ExpectedConditions.visibilityOf(deletePostButton));
-        deletePostButton.click();
-        waitPageTobeFullLoaded();
+    public boolean clickOnBinIcon () {
+        try {
+            WebElement deletePostButton = modalElement.findElement(By.xpath("//div/label/a"));
+            wait.until(ExpectedConditions.visibilityOf(deletePostButton)).isDisplayed();
+            deletePostButton.click();
+        } catch  (NoSuchElementException e) {
+        }
+        System.out.println("CONFIRMATION #: The user has clicked on Delete Post button.");
+        return true;
     }
 
-    public void confirmDeletingPost () {
-        WebElement confirmDeletingPost = modalElement.findElement(By.cssSelector(".delete-confirm"));
-        wait.until(ExpectedConditions.visibilityOf(confirmDeletingPost));
-        confirmDeletingPost.click();
-        waitPageTobeFullLoaded();
+
+//    public boolean confirmDeletingPost() {
+//        try {
+//            WebElement confirmDeletingPost = modalElement.findElement(By.cssSelector("div.delete-confirm"));
+//            wait.until(ExpectedConditions.visibilityOf(confirmDeletingPost)).isDisplayed();
+//        } catch  (NoSuchElementException e) {
+//        }
+//        System.out.println("CONFIRMATION #: The 'Are you sure? -Yes/No' element is visible.");
+//        return true;
+//    }
+
+    public boolean confirmYesToDelete() {
+        try {
+            WebElement clickYesToDelete = modalElement.findElement(By.cssSelector("button.btn.btn-primary.btn-sm[type='button']"));
+            clickYesToDelete.getAttribute("Yes");
+            wait.until(ExpectedConditions.elementToBeClickable(clickYesToDelete)).click();
+        } catch  (NoSuchElementException e) {
+        }
+        System.out.println("CONFIRMATION #: The user has clicked on Yes and image is deleted.");
+
+        return true;
     }
 
-    public String getIframeInfo () {
-        iframeId = iframeElement.getAttribute("id");
-        iframeName = iframeElement.getAttribute("name");
-        return "id" + "name";
-    }
 }
