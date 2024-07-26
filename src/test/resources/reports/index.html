@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-All_Test_Suite" class="navigator-link">
+              <span class="suite-name border-failed">All Test Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-All_Test_Suite" class="navigator-link ">
+                    <span>C:\Users\tsvet\Test\SKAU14TAF\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-All_Test_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-All_Test_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-All_Test_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-All_Test_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-All_Test_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-All_Test_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods failed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods failed suite-All_Test_Suite"> (show)</a> <!-- show-methods failed suite-All_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-All_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.LoginTest" class="method navigator-link" hash-for-method="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-All_Test_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods passed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods passed suite-All_Test_Suite"> (show)</a> <!-- show-methods passed suite-All_Test_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-All_Test_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.EndToEndTest" class="method navigator-link" hash-for-method="endToEndTest">endToEndTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.LoginTest" class="method navigator-link" hash-for-method="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.LoginTest" class="method navigator-link" hash-for-method="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.LoginTest" class="method navigator-link" hash-for-method="verifyAlreadyRegisteredUserCanSuccessfullyLogin">verifyAlreadyRegisteredUserCanSuccessfullyLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.LoginTest" class="method navigator-link" hash-for-method="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut">verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.PostTest" class="method navigator-link" hash-for-method="verifyUserCanCreateNewPostAndDeleteIt(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)">verifyUserCanCreateNewPostAndDeleteIt(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.ProfileTest" class="method navigator-link" hash-for-method="verifyUserCanPostProfilePicture(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)">verifyUserCanPostProfilePicture(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.RegistrationTest" class="method navigator-link" hash-for-method="verifyUserCanRegisterWithValidData">verifyUserCanRegisterWithValidData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.RegistrationTest" class="method navigator-link" hash-for-method="verifyUserCannotRegisterWithInvalidData">verifyUserCannotRegisterWithInvalidData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-All_Test_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-All_Test_Suite" class="panel All_Test_Suite">
+          <div class="suite-All_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.skilo.gui.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword">
+                  </a> <!-- verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword -->
+                  <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Invalid username or password] but found [Ivalid password]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillo.POM.LoginPage.msgStatusAfterInvalidLoginWithWrongPassword(LoginPage.java:96)
+	at com.skilo.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:139)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-failed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.skilo.gui.RegistrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserCanRegisterWithValidData">
+                  </a> <!-- verifyUserCanRegisterWithValidData -->
+                  <span class="method-name">verifyUserCanRegisterWithValidData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserCannotRegisterWithInvalidData">
+                  </a> <!-- verifyUserCannotRegisterWithInvalidData -->
+                  <span class="method-name">verifyUserCannotRegisterWithInvalidData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.skilo.gui.PostTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserCanCreateNewPostAndDeleteIt(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)">
+                  </a> <!-- verifyUserCanCreateNewPostAndDeleteIt(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...) -->
+                  <span class="method-name">verifyUserCanCreateNewPostAndDeleteIt</span>
+                  <span class="parameters">(testingDemos,testing,testingDemos,src\test\resources\uploads\testUpload.jpg,Testing create post caption)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.skilo.gui.ProfileTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserCanPostProfilePicture(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)">
+                  </a> <!-- verifyUserCanPostProfilePicture(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...) -->
+                  <span class="method-name">verifyUserCanPostProfilePicture</span>
+                  <span class="parameters">(testingDemos,testing,testingDemos,src\test\resources\uploads\testUpload.jpg,Testing create post caption)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.skilo.gui.EndToEndTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="endToEndTest">
+                  </a> <!-- endToEndTest -->
+                  <span class="method-name">endToEndTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.skilo.gui.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials">
+                  </a> <!-- verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials -->
+                  <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername">
+                  </a> <!-- verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername -->
+                  <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAlreadyRegisteredUserCanSuccessfullyLogin">
+                  </a> <!-- verifyAlreadyRegisteredUserCanSuccessfullyLogin -->
+                  <span class="method-name">verifyAlreadyRegisteredUserCanSuccessfullyLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut">
+                  </a> <!-- verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut -->
+                  <span class="method-name">verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+        </div> <!-- panel All_Test_Suite -->
+        <div panel-name="test-xml-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\tsvet\Test\SKAU14TAF\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;All Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;C:/Users/tsvet/Test/SKAU14TAF&quot; verbose=&quot;2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.skilo.gui.EndToEndTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;endToEndTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.skilo.gui.EndToEndTest --&gt;
+      &lt;class name=&quot;com.skilo.gui.LoginTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;verifyAlreadyRegisteredUserCanSuccessfullyLogin&quot;/&gt;
+          &lt;include name=&quot;verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut&quot;/&gt;
+          &lt;include name=&quot;verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword&quot;/&gt;
+          &lt;include name=&quot;verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername&quot;/&gt;
+          &lt;include name=&quot;verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.skilo.gui.LoginTest --&gt;
+      &lt;class name=&quot;com.skilo.gui.PostTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;verifyUserCanCreateNewPostAndDeleteIt&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.skilo.gui.PostTest --&gt;
+      &lt;class name=&quot;com.skilo.gui.ProfileTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;verifyUserCanPostProfilePicture&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.skilo.gui.ProfileTest --&gt;
+      &lt;class name=&quot;com.skilo.gui.RegistrationTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;verifyUserCanRegisterWithValidData&quot;/&gt;
+          &lt;include name=&quot;verifyUserCannotRegisterWithInvalidData&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.skilo.gui.RegistrationTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- C:/Users/tsvet/Test/SKAU14TAF --&gt;
+&lt;/suite&gt; &lt;!-- All Test Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for All Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">C:/Users/tsvet/Test/SKAU14TAF (5 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for All Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for All Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_All_Test_Suite');
+function tableData_All_Test_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(10);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyUserCanCreateNewPostAndDeleteIt')
+data.setCell(0, 2, 'com.skilo.gui.PostTest')
+data.setCell(0, 3, 41696);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyUserCanRegisterWithValidData')
+data.setCell(1, 2, 'com.skilo.gui.RegistrationTest')
+data.setCell(1, 3, 5066);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyAlreadyRegisteredUserCanSuccessfullyLogin')
+data.setCell(2, 2, 'com.skilo.gui.LoginTest')
+data.setCell(2, 3, 4452);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword')
+data.setCell(3, 2, 'com.skilo.gui.LoginTest')
+data.setCell(3, 3, 4369);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyUserCanPostProfilePicture')
+data.setCell(4, 2, 'com.skilo.gui.ProfileTest')
+data.setCell(4, 3, 4235);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut')
+data.setCell(5, 2, 'com.skilo.gui.LoginTest')
+data.setCell(5, 3, 4200);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyUserCannotRegisterWithInvalidData')
+data.setCell(6, 2, 'com.skilo.gui.RegistrationTest')
+data.setCell(6, 3, 3425);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername')
+data.setCell(7, 2, 'com.skilo.gui.LoginTest')
+data.setCell(7, 3, 3290);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials')
+data.setCell(8, 2, 'com.skilo.gui.LoginTest')
+data.setCell(8, 3, 3267);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'endToEndTest')
+data.setCell(9, 2, 'com.skilo.gui.EndToEndTest')
+data.setCell(9, 3, 2330);
+window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-All_Test_Suite">
+              </div> <!-- times-div-All_Test_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for All Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">8 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.skilo.gui.RegistrationTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setupTestSuite</span>
+                <br/>
+                <span class="ignored-method-name">cleanFiles</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.skilo.gui.PostTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">cleanFiles</span>
+                <br/>
+                <span class="ignored-method-name">setupTestSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.skilo.gui.ProfileTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">cleanFiles</span>
+                <br/>
+                <span class="ignored-method-name">setupTestSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.skilo.gui.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">cleanFiles</span>
+                <br/>
+                <span class="ignored-method-name">setupTestSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.skilo.gui.EndToEndTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setupTestSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">652 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">endToEndTest</span>
+                <span class="method-start">2327 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=endToEndTest status=SUCCESS method=EndToEndTest.endToEndTest()[pri:0, instance:com....)</span>
+                <span class="method-start">4659 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.skilo.gui.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">4863 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials</span>
+                <span class="method-start">5855 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials status...)</span>
+                <span class="method-start">9123 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">9297 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword</span>
+                <span class="method-start">10221 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword status=FAILURE ...)</span>
+                <span class="method-start">14594 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">14910 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername</span>
+                <span class="method-start">15762 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername status=SUCCESS ...)</span>
+                <span class="method-start">19053 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">19232 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAlreadyRegisteredUserCanSuccessfullyLogin</span>
+                <span class="method-start">20048 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanSuccessfullyLogin status=SUCCESS method=LoginTest.ver...)</span>
+                <span class="method-start">24500 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">24669 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut</span>
+                <span class="method-start">25470 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut status=SUCCESS method=Logi...)</span>
+                <span class="method-start">29671 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.skilo.gui.PostTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">29850 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserCanCreateNewPostAndDeleteIt(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)</span>
+                <span class="method-start">30600 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=verifyUserCanCreateNewPostAndDeleteIt status=SUCCESS method=PostTest.verifyUserCanC...)</span>
+                <span class="method-start">72297 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.skilo.gui.ProfileTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">72616 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserCanPostProfilePicture(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)</span>
+                <span class="method-start">73534 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=verifyUserCanPostProfilePicture status=SUCCESS method=ProfileTest.verifyUserCanPost...)</span>
+                <span class="method-start">77770 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.skilo.gui.RegistrationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">77983 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserCanRegisterWithValidData</span>
+                <span class="method-start">78710 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=verifyUserCanRegisterWithValidData status=SUCCESS method=RegistrationTest.verifyUse...)</span>
+                <span class="method-start">83777 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">83959 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserCannotRegisterWithInvalidData</span>
+                <span class="method-start">84683 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=verifyUserCannotRegisterWithInvalidData status=SUCCESS method=RegistrationTest.veri...)</span>
+                <span class="method-start">88109 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.skilo.gui.EndToEndTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">cleanFiles</span>
+                <span class="method-start">88329 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
