@@ -12,8 +12,8 @@ public class PostTest extends TestObject{
 
     @DataProvider(name = "PostTestDataProvider")
     public Object[][] getUsers() {
-        File postPicture = new File("src\\test\\resources\\uploads\\testUpload.jpg");
-        String caption = "Testing create post caption";
+        File postPicture = new File("src\\test\\resources\\uploads\\CatTestImage.jpg");
+        String caption = "Hello Kitty";
 
         Object[][] objects = {{
                 "testingDemos", "testing",
@@ -90,11 +90,10 @@ public class PostTest extends TestObject{
         Assert.assertEquals(actualPostCount, expectedPostCount,"The number of Posts is incorrect!");
         System.out.println("The actual post count is" + actualPostCount);
 
-
         System.out.println("STEP 15: The user has deleted the new post so this test can be repeated.");
         postModal.clickOnBinIcon();
+        postModal.confirmDeletingPost();
         postModal.confirmYesToDelete();
-        Assert.assertTrue(postModal.confirmYesToDelete(),"The image was successfully is deleted.");
 
     }
 }
