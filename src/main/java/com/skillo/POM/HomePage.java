@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 
 public class HomePage extends ISkillo {
@@ -43,6 +46,7 @@ public class HomePage extends ISkillo {
 
     public void confirmVisibilityOfProfileLink () {
         wait.until(ExpectedConditions.elementToBeClickable(( By.id("nav-link-profile"))));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(55));
         waitAndClick(navigationProfileLink);
 
     }
