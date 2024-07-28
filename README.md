@@ -1,4 +1,4 @@
-<img align="center" src="SkilloLogo.png" alt="Skillo Academy Logo" width="400" height="100"/>
+<img align="center" src="skilloLogo.png" alt="Skillo Academy Logo" width="350" height="100"/>
 
 
 <div align="center">
