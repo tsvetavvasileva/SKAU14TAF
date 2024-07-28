@@ -33,7 +33,7 @@ ISkillo has enabled this magical instant access to information and communication
 
 ## Test  are performed with Selenium WebDriver v.4.21.0 and TestNG v.7.10.2 - Java v.21 unit framework:
 
-### List of test cases.
+### _List of test cases:_
 - **Registration feature**:
   - Verify user can register in the system with valid credentials.
   - Verify user cannot register in the system with invalid credentials.
@@ -99,7 +99,7 @@ Go to SRC TEST RESOURCES folder and verify if the following folders are present:
 IF NOT:
 When you build the project in src/test/java/gui and run the Maven test command you will find the folders are created by the automation script.
 
-**TO RUN THE AUTOMATION**
+**TO RUN THE AUTOMATION:**
 
 **STEP 1:** Go to the right vertical tab menu options within IntelliJ and click on Maven tab.
 
