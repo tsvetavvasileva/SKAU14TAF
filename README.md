@@ -58,7 +58,7 @@ ISkillo has enabled this magical instant access to information and communication
 
 **INSTALLATION REQUIREMENTS:**
 
-- To get a local copy of the project repository from my GitHub profile use this link: _**[[ !!! copy GitHub link here !!! ]]()**_
+- To get a local copy of the project repository from my GitHub profile use this link: [_**LINK TO THE REPOSITORY.**_](https://github.com/tsvetavvasileva/SKAU14TAF/tree/My-1st-Draft)
 - Make sure you have JAVA version 21 and up.
 - Make sure you have Maven version 3.8.1 and up.
 - Make sure you have Testng version 7.10.2 and up.
@@ -105,7 +105,7 @@ When you build the project in src/test/java/gui and run the Maven test command y
 
 **STEP 2:**
 Under Lifecycle dropdown Run these commands:
-**maven clean & maven test.**
+**_maven clean & maven test_.**
 
 **STEP 3:**
 Wait for the automation to start and after the tests execution a report will be generated.
