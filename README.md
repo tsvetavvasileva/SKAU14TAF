@@ -1,4 +1,4 @@
-<img align="center" src="skilloLogo.png" alt="Skilo Academy Logo" />
+<img align="center" src="SkilloLogo.png" alt="Skillo Academy Logo" width="400" height="100"/>
 
 
 <div align="center">
@@ -18,11 +18,11 @@
 - [Contact](#contact)
 
 ## Overview
-Iskillo social networking platform is an online platform where users can create a profile, share content and follow other people's content,
+ISkillo social networking platform is an online platform where users can create a profile, share content and follow other people's content,
 connect with friends, family, and colleagues in real time. 
 
 Users can easily engage with
-a broader online community with just one click. As well as follow and control their access to the online media and news from the comodity of their home.
+a broader online community with just one click. As well as to follow and control their access to the online media and news from the commodity of their home.
 
 ISkillo has enabled this magical instant access to information and communication with the goal of building a vast worldwide network.
 
