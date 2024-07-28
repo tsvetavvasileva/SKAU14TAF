@@ -67,7 +67,7 @@ ISkillo has enabled this magical instant access to information and communication
 
 **INSTALLATION STEPS:**
 
-Please, navigate to the Test Automation Framework using the link above,
+Please, navigate to the Test Automation Framework using the link provided above in INSTALLATION REQUIREMENTS.
 
 Make sure that you clone the repository to your local machine. There are 3 different ways to do this, as shown below:
  
@@ -75,7 +75,7 @@ Make sure that you clone the repository to your local machine. There are 3 diffe
 - Go to the GitHub.com website with the link above and click on the "Code" button.
 
 **Step num. 2***:
-- Copy the Repository HTTPS URL link and use git Bash to create your local copy: 
+- Copy the Repository HTTPS URL link and use git Bash to create your local copy. 
   
 - Open the console and use git clone command and the path link of the repository that you have copied from GitHub.
   
@@ -105,7 +105,7 @@ When you build the project in src/test/java/gui and run the Maven test command y
 
 **STEP 2:**
 Under Lifecycle dropdown Run these commands:
-**_maven clean & maven test_.**
+_maven clean & maven test_**.**
 
 **STEP 3:**
 Wait for the automation to start and after the tests execution a report will be generated.
