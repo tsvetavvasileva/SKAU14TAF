@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 69.695 s <<< FAILURE! - in TestSuite
-com.skilo.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword  Time elapsed: 2.272 s  <<< FAILURE!
+Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 67.466 s <<< FAILURE! - in TestSuite
+com.skilo.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword  Time elapsed: 2.356 s  <<< FAILURE!
 java.lang.AssertionError: expected [Invalid username or password] but found [Ivalid password]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -11,7 +11,7 @@ java.lang.AssertionError: expected [Invalid username or password] but found [Iva
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
 	at com.skillo.POM.LoginPage.msgStatusAfterInvalidLoginWithWrongPassword(LoginPage.java:96)
-	at com.skilo.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:139)
+	at com.skilo.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:140)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)

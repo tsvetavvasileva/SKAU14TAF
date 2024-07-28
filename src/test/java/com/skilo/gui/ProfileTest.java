@@ -22,7 +22,7 @@ public class ProfileTest extends TestObject {
     }
 
     @Test(dataProvider = "PostTestDataProvider")
-    public void verifyUserCanPostProfilePicture (String user, String password, String username, File file, String caption) throws InterruptedException {
+    public void verifyUserCanPostProfilePicture (String user, String password, String username, File file, String caption) {
 
         final String HOME_PAGE_URL = "posts/all";
         final String LOGIN_PAGE_URL = "users/login";
@@ -48,7 +48,7 @@ public class ProfileTest extends TestObject {
         homePage.confirmVisibilityOfProfileLink();
 
         System.out.println("STEP 7: The user has successfully uploaded a new Profile picture.");
-        ProfilePage profilePage = new ProfilePage(super.getWebDriver()); // error here !!
+        ProfilePage profilePage = new ProfilePage(super.getWebDriver());
         profilePage.uploadProfilePic(file);
 
         profilePage.isProfilePicDisplayed();

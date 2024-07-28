@@ -28,10 +28,6 @@ public class ProfilePage extends ISkillo {
     }
 
 
-    public void openProfilePage () {
-        navigateTo(PROFILE_PAGE_SUFFIX);
-    }
-
     public int getPostCount () {
         List < WebElement > posts = driver.findElements(By.tagName("app-post"));
         return posts.size();
@@ -45,7 +41,7 @@ public class ProfilePage extends ISkillo {
         js.executeScript("return document.readyState").equals("complete");
     }
 
-    public void uploadProfilePic (File file) {
+    public void uploadProfilePic (File file) {// shows no usages, but if you click on it, you will be able to see it is used and where-
         uploadProfilePic.sendKeys(file.getAbsolutePath());
         System.out.println("CONFIRMATION # The image was successfully uploaded.");
     }

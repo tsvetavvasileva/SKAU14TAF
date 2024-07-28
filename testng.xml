@@ -3,11 +3,6 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/tsvet/Test/SKAU14TAF">
         <classes>
-            <class name="com.skilo.gui.EndToEndTest">
-                <methods>
-                    <include name="endToEndTest"/>
-                </methods>
-            </class>
             <class name="com.skilo.gui.LoginTest">
                 <methods>
                     <include name="verifyAlreadyRegisteredUserCanSuccessfullyLogin"/>

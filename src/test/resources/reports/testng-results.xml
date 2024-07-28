@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-27T03:28:06 EEST" name="All Test Suite" finished-at="2024-07-27T03:29:15 EEST" duration-ms="68525">
+  <suite started-at="2024-07-28T21:24:38 EEST" name="All Test Suite" finished-at="2024-07-28T21:25:45 EEST" duration-ms="66325">
     <groups>
     </groups>
-    <test started-at="2024-07-27T03:28:06 EEST" name="C:/Users/tsvet/Test/SKAU14TAF" finished-at="2024-07-27T03:29:15 EEST" duration-ms="68525">
+    <test started-at="2024-07-28T21:24:38 EEST" name="C:/Users/tsvet/Test/SKAU14TAF" finished-at="2024-07-28T21:25:45 EEST" duration-ms="66325">
       <class name="com.skilo.gui.RegistrationTest">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.RegistrationTest@47eaca72]" started-at="2024-07-27T03:29:07 EEST" name="setUpTest" finished-at="2024-07-27T03:29:08 EEST" duration-ms="732" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.RegistrationTest@7b2bbc3]" started-at="2024-07-28T21:25:37 EEST" name="setUpTest" finished-at="2024-07-28T21:25:37 EEST" duration-ms="776" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyUserCanRegisterWithValidData()[pri:-1, instance:com.skilo.gui.RegistrationTest@47eaca72]" started-at="2024-07-27T03:29:08 EEST" name="verifyUserCanRegisterWithValidData" finished-at="2024-07-27T03:29:11 EEST" duration-ms="3524" status="PASS">
+        <test-method signature="verifyUserCanRegisterWithValidData()[pri:-1, instance:com.skilo.gui.RegistrationTest@7b2bbc3]" started-at="2024-07-28T21:25:37 EEST" name="verifyUserCanRegisterWithValidData" finished-at="2024-07-28T21:25:41 EEST" duration-ms="3852" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCanRegisterWithValidData -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.RegistrationTest@47eaca72]" started-at="2024-07-27T03:29:11 EEST" name="tearDownTest" finished-at="2024-07-27T03:29:11 EEST" duration-ms="175" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.RegistrationTest@7b2bbc3]" started-at="2024-07-28T21:25:41 EEST" name="tearDownTest" finished-at="2024-07-28T21:25:42 EEST" duration-ms="166" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserCanRegisterWithValidData status=SUCCESS method=RegistrationTest.verifyUserCanRegisterWithValidData()[pri:-1, instance:com.skilo.gui.RegistrationTest@47eaca72] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserCanRegisterWithValidData status=SUCCESS method=RegistrationTest.verifyUserCanRegisterWithValidData()[pri:-1, instance:com.skilo.gui.RegistrationTest@7b2bbc3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.RegistrationTest@47eaca72]" started-at="2024-07-27T03:29:11 EEST" name="setUpTest" finished-at="2024-07-27T03:29:12 EEST" duration-ms="789" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.RegistrationTest@7b2bbc3]" started-at="2024-07-28T21:25:42 EEST" name="setUpTest" finished-at="2024-07-28T21:25:42 EEST" duration-ms="842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyUserCannotRegisterWithInvalidData()[pri:0, instance:com.skilo.gui.RegistrationTest@47eaca72]" started-at="2024-07-27T03:29:12 EEST" name="verifyUserCannotRegisterWithInvalidData" finished-at="2024-07-27T03:29:14 EEST" duration-ms="2256" status="PASS">
+        <test-method signature="verifyUserCannotRegisterWithInvalidData()[pri:0, instance:com.skilo.gui.RegistrationTest@7b2bbc3]" started-at="2024-07-28T21:25:42 EEST" name="verifyUserCannotRegisterWithInvalidData" finished-at="2024-07-28T21:25:45 EEST" duration-ms="2242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCannotRegisterWithInvalidData -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.RegistrationTest@47eaca72]" started-at="2024-07-27T03:29:14 EEST" name="tearDownTest" finished-at="2024-07-27T03:29:15 EEST" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.RegistrationTest@7b2bbc3]" started-at="2024-07-28T21:25:45 EEST" name="tearDownTest" finished-at="2024-07-28T21:25:45 EEST" duration-ms="164" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserCannotRegisterWithInvalidData status=SUCCESS method=RegistrationTest.verifyUserCannotRegisterWithInvalidData()[pri:0, instance:com.skilo.gui.RegistrationTest@47eaca72] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserCannotRegisterWithInvalidData status=SUCCESS method=RegistrationTest.verifyUserCannotRegisterWithInvalidData()[pri:0, instance:com.skilo.gui.RegistrationTest@7b2bbc3] output={null}]]]>
               </value>
             </param>
           </params>
@@ -47,11 +47,11 @@
         </test-method> <!-- tearDownTest -->
       </class> <!-- com.skilo.gui.RegistrationTest -->
       <class name="com.skilo.gui.ProfileTest">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.ProfileTest@1aafa419]" started-at="2024-07-27T03:29:03 EEST" name="setUpTest" finished-at="2024-07-27T03:29:04 EEST" duration-ms="800" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.ProfileTest@48f2bd5b]" started-at="2024-07-28T21:25:32 EEST" name="setUpTest" finished-at="2024-07-28T21:25:33 EEST" duration-ms="891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyUserCanPostProfilePicture(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String)[pri:0, instance:com.skilo.gui.ProfileTest@1aafa419]" started-at="2024-07-27T03:29:04 EEST" name="verifyUserCanPostProfilePicture" data-provider="PostTestDataProvider" finished-at="2024-07-27T03:29:07 EEST" duration-ms="3131" status="PASS">
+        <test-method signature="verifyUserCanPostProfilePicture(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String)[pri:0, instance:com.skilo.gui.ProfileTest@48f2bd5b]" started-at="2024-07-28T21:25:33 EEST" name="verifyUserCanPostProfilePicture" data-provider="PostTestDataProvider" finished-at="2024-07-28T21:25:37 EEST" duration-ms="3446" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -82,11 +82,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCanPostProfilePicture -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.ProfileTest@1aafa419]" started-at="2024-07-27T03:29:07 EEST" name="tearDownTest" finished-at="2024-07-27T03:29:07 EEST" duration-ms="237" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.ProfileTest@48f2bd5b]" started-at="2024-07-28T21:25:37 EEST" name="tearDownTest" finished-at="2024-07-28T21:25:37 EEST" duration-ms="178" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserCanPostProfilePicture status=SUCCESS method=ProfileTest.verifyUserCanPostProfilePicture(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String)[pri:0, instance:com.skilo.gui.ProfileTest@1aafa419] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserCanPostProfilePicture status=SUCCESS method=ProfileTest.verifyUserCanPostProfilePicture(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String)[pri:0, instance:com.skilo.gui.ProfileTest@48f2bd5b] output={null}]]]>
               </value>
             </param>
           </params>
@@ -95,30 +95,34 @@
         </test-method> <!-- tearDownTest -->
       </class> <!-- com.skilo.gui.ProfileTest -->
       <class name="com.skilo.gui.LoginTest">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:08 EEST" name="setUpTest" finished-at="2024-07-27T03:28:10 EEST" duration-ms="1088" status="PASS">
+        <test-method is-config="true" signature="setupTestSuite()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:38 EEST" name="setupTestSuite" finished-at="2024-07-28T21:24:38 EEST" duration-ms="500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTestSuite -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:38 EEST" name="setUpTest" finished-at="2024-07-28T21:24:40 EEST" duration-ms="1279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:10 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials" finished-at="2024-07-27T03:28:12 EEST" duration-ms="2246" status="PASS">
+        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:40 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials" finished-at="2024-07-28T21:24:42 EEST" duration-ms="2046" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:12 EEST" name="tearDownTest" finished-at="2024-07-27T03:28:12 EEST" duration-ms="181" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:42 EEST" name="tearDownTest" finished-at="2024-07-28T21:24:42 EEST" duration-ms="173" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials status=SUCCESS method=LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3] output={null}]]]>
+                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials status=SUCCESS method=LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials()[pri:0, instance:com.skilo.gui.LoginTest@128d2484] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:12 EEST" name="setUpTest" finished-at="2024-07-27T03:28:13 EEST" duration-ms="956" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:42 EEST" name="setUpTest" finished-at="2024-07-28T21:24:43 EEST" duration-ms="1047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:13 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword" finished-at="2024-07-27T03:28:15 EEST" duration-ms="2275" status="FAIL">
+        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:43 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword" finished-at="2024-07-28T21:24:45 EEST" duration-ms="2353" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Invalid username or password] but found [Ivalid password]]]>
@@ -132,7 +136,7 @@ at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
 at com.skillo.POM.LoginPage.msgStatusAfterInvalidLoginWithWrongPassword(LoginPage.java:96)
-at com.skilo.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:139)
+at com.skilo.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:140)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -169,81 +173,85 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:15 EEST" name="tearDownTest" finished-at="2024-07-27T03:28:16 EEST" duration-ms="327" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:45 EEST" name="tearDownTest" finished-at="2024-07-28T21:24:46 EEST" duration-ms="326" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword status=FAILURE method=LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3] output={null}]]]>
+                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword status=FAILURE method=LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword()[pri:0, instance:com.skilo.gui.LoginTest@128d2484] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:16 EEST" name="setUpTest" finished-at="2024-07-27T03:28:17 EEST" duration-ms="1041" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:46 EEST" name="setUpTest" finished-at="2024-07-28T21:24:47 EEST" duration-ms="917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:17 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername" finished-at="2024-07-27T03:28:19 EEST" duration-ms="1989" status="PASS">
+        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:47 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername" finished-at="2024-07-28T21:24:49 EEST" duration-ms="2040" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:19 EEST" name="tearDownTest" finished-at="2024-07-27T03:28:19 EEST" duration-ms="153" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:49 EEST" name="tearDownTest" finished-at="2024-07-28T21:24:49 EEST" duration-ms="151" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername status=SUCCESS method=LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3] output={null}]]]>
+                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername status=SUCCESS method=LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername()[pri:0, instance:com.skilo.gui.LoginTest@128d2484] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:19 EEST" name="setUpTest" finished-at="2024-07-27T03:28:20 EEST" duration-ms="812" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:49 EEST" name="setUpTest" finished-at="2024-07-28T21:24:50 EEST" duration-ms="754" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanSuccessfullyLogin()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:20 EEST" name="verifyAlreadyRegisteredUserCanSuccessfullyLogin" finished-at="2024-07-27T03:28:23 EEST" duration-ms="3357" status="PASS">
+        <test-method signature="verifyAlreadyRegisteredUserCanSuccessfullyLogin()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:50 EEST" name="verifyAlreadyRegisteredUserCanSuccessfullyLogin" finished-at="2024-07-28T21:24:53 EEST" duration-ms="3045" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlreadyRegisteredUserCanSuccessfullyLogin -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:23 EEST" name="tearDownTest" finished-at="2024-07-27T03:28:23 EEST" duration-ms="181" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:53 EEST" name="tearDownTest" finished-at="2024-07-28T21:24:53 EEST" duration-ms="149" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanSuccessfullyLogin status=SUCCESS method=LoginTest.verifyAlreadyRegisteredUserCanSuccessfullyLogin()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3] output={null}]]]>
+                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanSuccessfullyLogin status=SUCCESS method=LoginTest.verifyAlreadyRegisteredUserCanSuccessfullyLogin()[pri:0, instance:com.skilo.gui.LoginTest@128d2484] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:23 EEST" name="setUpTest" finished-at="2024-07-27T03:28:24 EEST" duration-ms="787" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:53 EEST" name="setUpTest" finished-at="2024-07-28T21:24:54 EEST" duration-ms="793" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:24 EEST" name="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut" finished-at="2024-07-27T03:28:27 EEST" duration-ms="3510" status="PASS">
+        <test-method signature="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:54 EEST" name="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut" finished-at="2024-07-28T21:24:57 EEST" duration-ms="3366" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3]" started-at="2024-07-27T03:28:27 EEST" name="tearDownTest" finished-at="2024-07-27T03:28:28 EEST" duration-ms="207" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:24:57 EEST" name="tearDownTest" finished-at="2024-07-28T21:24:57 EEST" duration-ms="162" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut status=SUCCESS method=LoginTest.verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut()[pri:0, instance:com.skilo.gui.LoginTest@7b2bbc3] output={null}]]]>
+                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut status=SUCCESS method=LoginTest.verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut()[pri:0, instance:com.skilo.gui.LoginTest@128d2484] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="cleanFiles()[pri:0, instance:com.skilo.gui.LoginTest@128d2484]" started-at="2024-07-28T21:25:45 EEST" name="cleanFiles" finished-at="2024-07-28T21:25:45 EEST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanFiles -->
       </class> <!-- com.skilo.gui.LoginTest -->
       <class name="com.skilo.gui.PostTest">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.PostTest@a1153bc]" started-at="2024-07-27T03:28:28 EEST" name="setUpTest" finished-at="2024-07-27T03:28:29 EEST" duration-ms="889" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.PostTest@692f203f]" started-at="2024-07-28T21:24:57 EEST" name="setUpTest" finished-at="2024-07-28T21:24:58 EEST" duration-ms="814" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyUserCanCreateNewPostAndDeleteIt(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String)[pri:0, instance:com.skilo.gui.PostTest@a1153bc]" started-at="2024-07-27T03:28:29 EEST" name="verifyUserCanCreateNewPostAndDeleteIt" data-provider="PostTestDataProvider" finished-at="2024-07-27T03:29:03 EEST" duration-ms="33999" status="PASS">
+        <test-method signature="verifyUserCanCreateNewPostAndDeleteIt(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String)[pri:0, instance:com.skilo.gui.PostTest@692f203f]" started-at="2024-07-28T21:24:58 EEST" name="verifyUserCanCreateNewPostAndDeleteIt" data-provider="PostTestDataProvider" finished-at="2024-07-28T21:25:32 EEST" duration-ms="34075" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -274,11 +282,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCanCreateNewPostAndDeleteIt -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.PostTest@a1153bc]" started-at="2024-07-27T03:29:03 EEST" name="tearDownTest" finished-at="2024-07-27T03:29:03 EEST" duration-ms="212" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.PostTest@692f203f]" started-at="2024-07-28T21:25:32 EEST" name="tearDownTest" finished-at="2024-07-28T21:25:32 EEST" duration-ms="229" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserCanCreateNewPostAndDeleteIt status=SUCCESS method=PostTest.verifyUserCanCreateNewPostAndDeleteIt(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String)[pri:0, instance:com.skilo.gui.PostTest@a1153bc] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserCanCreateNewPostAndDeleteIt status=SUCCESS method=PostTest.verifyUserCanCreateNewPostAndDeleteIt(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String)[pri:0, instance:com.skilo.gui.PostTest@692f203f] output={null}]]]>
               </value>
             </param>
           </params>
@@ -286,35 +294,6 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           </reporter-output>
         </test-method> <!-- tearDownTest -->
       </class> <!-- com.skilo.gui.PostTest -->
-      <class name="com.skilo.gui.EndToEndTest">
-        <test-method is-config="true" signature="setupTestSuite()[pri:0, instance:com.skilo.gui.EndToEndTest@7c7b252e]" started-at="2024-07-27T03:28:06 EEST" name="setupTestSuite" finished-at="2024-07-27T03:28:06 EEST" duration-ms="492" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupTestSuite -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.skilo.gui.EndToEndTest@7c7b252e]" started-at="2024-07-27T03:28:06 EEST" name="setUpTest" finished-at="2024-07-27T03:28:07 EEST" duration-ms="1276" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpTest -->
-        <test-method signature="endToEndTest()[pri:0, instance:com.skilo.gui.EndToEndTest@7c7b252e]" started-at="2024-07-27T03:28:07 EEST" name="endToEndTest" finished-at="2024-07-27T03:28:08 EEST" duration-ms="924" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endToEndTest -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.skilo.gui.EndToEndTest@7c7b252e]" started-at="2024-07-27T03:28:08 EEST" name="tearDownTest" finished-at="2024-07-27T03:28:08 EEST" duration-ms="209" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=endToEndTest status=SUCCESS method=EndToEndTest.endToEndTest()[pri:0, instance:com.skilo.gui.EndToEndTest@7c7b252e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="cleanFiles()[pri:0, instance:com.skilo.gui.EndToEndTest@7c7b252e]" started-at="2024-07-27T03:29:15 EEST" name="cleanFiles" finished-at="2024-07-27T03:29:15 EEST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanFiles -->
-      </class> <!-- com.skilo.gui.EndToEndTest -->
     </test> <!-- C:/Users/tsvet/Test/SKAU14TAF -->
   </suite> <!-- All Test Suite -->
 </testng-results>

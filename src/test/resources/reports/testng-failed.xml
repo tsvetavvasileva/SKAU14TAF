@@ -7,8 +7,8 @@
         <methods>
           <include name="setupTestSuite"/>
           <include name="cleanFiles"/>
-          <include name="tearDownTest"/>
           <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword"/>
+          <include name="tearDownTest"/>
           <include name="setUpTest"/>
         </methods>
       </class> <!-- com.skilo.gui.LoginTest -->

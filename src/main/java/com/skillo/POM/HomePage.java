@@ -73,7 +73,7 @@ public class HomePage extends ISkillo {
         System.out.println("ACTION @ The user is verifying if the navigation log out button is presented.");
         try {
             wait.until(ExpectedConditions.visibilityOf(navigationLogOutButton));
-            System.out.println("CONFIRM # Navigation logout button is presented to the user.");
+            System.out.println("CONFIRMATION # Navigation logout button is presented to the user.");
             isButtonShown = true;
         } catch (TimeoutException e) {
             System.out.println("ERROR ! The navigation logout button was not presented to the user.");

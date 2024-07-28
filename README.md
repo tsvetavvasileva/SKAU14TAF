@@ -105,10 +105,10 @@ When you build the project in src/test/java/gui and run the Maven test command y
 
 **STEP 2:**
 Under Lifecycle dropdown Run these commands:
-**maven clean & maven test**
+**maven clean & maven test.**
 
 **STEP 3:**
-Wait a bit the automation to start and after the tests execution a report will be generated.
+Wait for the automation to start and after the tests execution a report will be generated.
 
 
 ## Bug report

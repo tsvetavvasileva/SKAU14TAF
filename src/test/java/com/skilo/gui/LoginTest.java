@@ -7,7 +7,7 @@ public class LoginTest extends TestObject {
 
 
     @Test
-    public void verifyAlreadyRegisteredUserCanSuccessfullyLogin() throws InterruptedException {
+    public void verifyAlreadyRegisteredUserCanSuccessfullyLogin() {
         System.out.println("=== > *** Verify a registered user can successfully login in the system with valid credentials *** < ===");
 
         final String USERNAME = "gandalf";
@@ -49,12 +49,12 @@ public class LoginTest extends TestObject {
 
         System.out.println("STEP 9: The user has successfully clicked on HomePage Profile link after logging in the system with valid data.");
         loginPage.isUserNameDisplayed("Username is displayed.");
-
+        homePage.isLogOutButtonShown();
 
     }
 
     @Test
-    public void verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut() throws InterruptedException {
+    public void verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut() {
         System.out.println("=== > *** Verify a registered user can successfully login in the system with valid credentials *** < ===");
 
         final String USERNAME = "gandalf";
@@ -96,6 +96,7 @@ public class LoginTest extends TestObject {
 
         System.out.println("STEP 9: The user has successfully clicked on HomePage Profile link after logging in the system with valid data.");
         loginPage.isUserNameDisplayed("Username is displayed.");
+        homePage.isLogOutButtonShown();
 
         System.out.println("STEP 9: The user has successfully clicked on the LogOut Button.");
         homePage.clickOnLogOutButton();
@@ -103,7 +104,7 @@ public class LoginTest extends TestObject {
     }
 
     @Test
-    public void verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword() throws InterruptedException {
+    public void verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword() {
         System.out.println("=== > *** Verify a user cannot successfully login in the system with WRONG PASSWORD *** < ===");
 
         final String USERNAME = "gandalf";
@@ -182,7 +183,7 @@ public class LoginTest extends TestObject {
     }
 
     @Test
-    public void verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials() throws InterruptedException {
+    public void verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials() {
         System.out.println("=== > *** Verify a user cannot successfully login in the system with NO CREDENTIALS *** < ===");
 
         final String USERNAME = ". ";

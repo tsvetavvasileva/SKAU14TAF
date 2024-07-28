@@ -1,7 +1,6 @@
 package com.skillo.POM;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -12,8 +11,6 @@ import java.time.Duration;
 public class PostModal extends ISkillo {
     private final WebElement modalElement;
 
-    @FindBy(xpath = "//*[@id=\"toast-container\"]")
-    private WebElement popUpMsg;
 
 
     public PostModal (WebDriver driver) {
@@ -31,6 +28,7 @@ public class PostModal extends ISkillo {
             String imgUrl = image.getAttribute("src");
             boolean contains = imgUrl.contains("https://i.imgur.com");
         } catch  (NoSuchElementException e) {
+            System.out.println("NoSuchElementException occured: "+ e.getMessage());
         }
         System.out.println("CONFIRMATION #: The image is displayed.");
         return true;
@@ -43,11 +41,13 @@ public class PostModal extends ISkillo {
             wait.until(ExpectedConditions.visibilityOf(postUser)).isDisplayed();
             postUser.getText();
         } catch  (NoSuchElementException e) {
+            System.out.println("NoSuchElementException occured: "+ e.getMessage());
         }
         System.out.println("CONFIRMATION #: The username is displayed.");
 
         return true;
     }
+
 
     public boolean clickOnBinIcon () {
         try {
@@ -55,6 +55,7 @@ public class PostModal extends ISkillo {
             wait.until(ExpectedConditions.visibilityOf(deletePostButton)).isDisplayed();
             deletePostButton.click();
         } catch  (NoSuchElementException e) {
+            System.out.println("NoSuchElementException occured: "+ e.getMessage());
         }
         System.out.println("CONFIRMATION #: The user has clicked on Delete Post button.");
 
@@ -67,11 +68,13 @@ public class PostModal extends ISkillo {
             WebElement confirmDeletingPost = modalElement.findElement(By.cssSelector("div.delete-confirm"));
             wait.until(ExpectedConditions.visibilityOf(confirmDeletingPost)).isDisplayed();
         } catch  (NoSuchElementException e) {
+            System.out.println("NoSuchElementException occured: "+ e.getMessage());
         }
         System.out.println("CONFIRMATION #: The 'Are you sure? -Yes/No' element is visible.");
 
         return true;
     }
+
 
     public boolean confirmYesToDelete() {
         try {
@@ -82,6 +85,7 @@ public class PostModal extends ISkillo {
             wait.until(ExpectedConditions.visibilityOf(popUpMsg));
             Assert.assertEquals(popUpMsg.getText(), "Post Deleted!", "Post Deleted!");
         } catch  (NoSuchElementException e) {
+            System.out.println("NoSuchElementException occured: "+ e.getMessage());
         }
         System.out.println("CONFIRMATION #: The user has confirmed selecting Yes and image was deleted.");
 

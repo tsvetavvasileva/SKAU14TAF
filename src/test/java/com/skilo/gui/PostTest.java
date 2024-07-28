@@ -23,7 +23,7 @@ public class PostTest extends TestObject{
     }
 
     @Test(dataProvider = "PostTestDataProvider")
-    public void verifyUserCanCreateNewPostAndDeleteIt(String user, String password, String username, File file, String caption) throws InterruptedException {
+    public void verifyUserCanCreateNewPostAndDeleteIt(String user, String password, String username, File file, String caption){
         System.out.println("=== > *** Verify the user can create a new post and delete the new post *** < ===");
 
         final String HOME_PAGE_URL = "posts/all";
@@ -41,7 +41,6 @@ public class PostTest extends TestObject{
         System.out.println("STEP 3: The HomePage URL is fully loaded.");
         homePage.isUrlLoaded(LOGIN_PAGE_URL);
 
-
         System.out.println("STEP 4: The user has provided correct credentials and has logged in successfully.");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.loginWithUserAndPassword(user, password);
@@ -51,7 +50,6 @@ public class PostTest extends TestObject{
 
         System.out.println("STEP 6: The user has clicked on New Post button.");
         homePage.clickOnNewPostButton();
-
 
         System.out.println("STEP 7: The user has successfully uploaded a new picture.");
         PostPage postPage = new PostPage(super.getWebDriver());
@@ -71,7 +69,6 @@ public class PostTest extends TestObject{
 
         PostModal postModal = new PostModal(super.getWebDriver());
         postModal.isImagePostVisible();
-
 
         System.out.println("Step 12: The user has clicked on the first post.");
         ProfilePage profilePage = new ProfilePage((super.getWebDriver()));
@@ -94,6 +91,6 @@ public class PostTest extends TestObject{
         postModal.clickOnBinIcon();
         postModal.confirmDeletingPost();
         postModal.confirmYesToDelete();
-
     }
+
 }
