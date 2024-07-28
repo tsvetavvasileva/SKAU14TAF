@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends TestObject {
 
-
     @Test
     public void verifyAlreadyRegisteredUserCanSuccessfullyLogin() {
         System.out.println("=== > *** Verify a registered user can successfully login in the system with valid credentials *** < ===");
@@ -19,7 +18,6 @@ public class LoginTest extends TestObject {
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
 
-
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
         homePage.clickOnNavigationLoginButton();
 
@@ -28,7 +26,6 @@ public class LoginTest extends TestObject {
         loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
-
 
         System.out.println("STEP 4: The user has provided a valid username.");
         loginPage.provideUserName(USERNAME);
@@ -50,7 +47,6 @@ public class LoginTest extends TestObject {
         System.out.println("STEP 9: The user has successfully clicked on HomePage Profile link after logging in the system with valid data.");
         loginPage.isUserNameDisplayed("Username is displayed.");
         homePage.isLogOutButtonShown();
-
     }
 
     @Test
@@ -66,7 +62,6 @@ public class LoginTest extends TestObject {
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
 
-
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
         homePage.clickOnNavigationLoginButton();
 
@@ -75,7 +70,6 @@ public class LoginTest extends TestObject {
         loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
-
 
         System.out.println("STEP 4: The user has provided a valid username.");
         loginPage.provideUserName(USERNAME);
@@ -100,7 +94,6 @@ public class LoginTest extends TestObject {
 
         System.out.println("STEP 9: The user has successfully clicked on the LogOut Button.");
         homePage.clickOnLogOutButton();
-
     }
 
     @Test
@@ -116,7 +109,6 @@ public class LoginTest extends TestObject {
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
 
-
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
         homePage.clickOnNavigationLoginButton();
 
@@ -125,7 +117,6 @@ public class LoginTest extends TestObject {
         loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
-
 
         System.out.println("STEP 4: The user has provided a valid username.");
         loginPage.provideUserName(USERNAME);
@@ -139,8 +130,6 @@ public class LoginTest extends TestObject {
         System.out.println("STEP 7: The user has provided wrong data and is not logged in the system.");
         loginPage.msgStatusAfterInvalidLoginWithWrongPassword();
         loginPage.verifyLoginPageUrlIsCorrect();
-
-
     }
 
     @Test
@@ -156,7 +145,6 @@ public class LoginTest extends TestObject {
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
 
-
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
         homePage.clickOnNavigationLoginButton();
 
@@ -165,7 +153,6 @@ public class LoginTest extends TestObject {
         loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
-
 
         System.out.println("STEP 4: The user has provided a wrong username.");
         loginPage.provideUserName(USERNAME);
@@ -179,7 +166,6 @@ public class LoginTest extends TestObject {
         System.out.println("STEP 7: The user has provided wrong data and is not logged in the system.");
         loginPage.msgStatusAfterInvalidLoginWithWrongUsername();
         loginPage.verifyLoginPageUrlIsCorrect();
-
     }
 
     @Test
@@ -195,7 +181,6 @@ public class LoginTest extends TestObject {
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
 
-
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
         homePage.clickOnNavigationLoginButton();
 
@@ -204,7 +189,6 @@ public class LoginTest extends TestObject {
         loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
-
 
         System.out.println("STEP 4: The user has provided an empty username.");
         loginPage.provideUserName(USERNAME);
@@ -219,8 +203,5 @@ public class LoginTest extends TestObject {
         System.out.println("STEP 7: The user has not provided any login data and is not logged in the system.");
         loginPage.msgStatusAfterInvalidLoginWithEmptyData();
         loginPage.verifyLoginPageUrlIsCorrect();
-
-
     }
-
 }

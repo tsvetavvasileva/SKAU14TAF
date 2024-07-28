@@ -11,22 +11,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.io.File;
 import java.util.List;
 
-
 public class ProfilePage extends ISkillo {
     public static final String PROFILE_PAGE_SUFFIX = "users/8376";
-
 
     @FindBy(id = "upload-img")
     private WebElement uploadProfilePic;
     @FindBy(className = "profile-image-source")
     private WebElement imgSource;
 
-
     public ProfilePage (WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
-
 
     public int getPostCount () {
         List < WebElement > posts = driver.findElements(By.tagName("app-post"));
@@ -36,7 +32,6 @@ public class ProfilePage extends ISkillo {
     public void clickPost (int postIndex) {
         List < WebElement > posts = driver.findElements(By.tagName("app-post"));
         posts.get(postIndex).click();
-
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("return document.readyState").equals("complete");
     }

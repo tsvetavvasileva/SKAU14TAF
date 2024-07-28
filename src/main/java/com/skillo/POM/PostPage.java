@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-
 import java.io.File;
 
 public class PostPage extends ISkillo {
@@ -64,5 +63,4 @@ public class PostPage extends ISkillo {
         createPostButton.click();
         System.out.println("CONFIRMATION# The user has clicked on submit post button.");
     }
-
 }

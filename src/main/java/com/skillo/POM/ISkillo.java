@@ -16,24 +16,21 @@ public class ISkillo {
 
     public ISkillo(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(25));
     }
 
     public void navigateTo(String pageURSuffix) {
         String currentURL = BASE_URL + pageURSuffix;
         System.out.println(currentURL+ " " + ("this is the current url"));
         driver.get(currentURL);
-
         waitPageTobeFullLoaded();
     }
 
     public void waitAndClick(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
         wait.until(ExpectedConditions.elementToBeClickable(element));
-
         element.click();
         System.out.println("The user has clicked on element.");
-
         waitPageTobeFullLoaded();
     }
 
@@ -41,10 +38,8 @@ public class ISkillo {
         wait.until(ExpectedConditions.visibilityOf(element));
         element.clear();
         element.sendKeys(inputText);
-
         waitPageTobeFullLoaded();
     }
-
 
     public void waitPageTobeFullLoaded() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -69,5 +64,4 @@ public class ISkillo {
         }
         return isTitleShown;
     }
-
 }

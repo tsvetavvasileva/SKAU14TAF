@@ -7,10 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-
 public class RegistrationPage extends ISkillo {
     public static final String REGISTER_PAGE_SUFFIX = "users/register";
-
 
     @FindBy(xpath = "/html/body/app-root/div[2]/app-register/div/div/form/h4")
     private WebElement registerPageHeaderTitle;
@@ -29,16 +27,13 @@ public class RegistrationPage extends ISkillo {
     @FindBy(xpath = "//div[@class=\"toast-bottom-right toast-container\"]")
     private WebElement popUpMsg;
 
-
     public RegistrationPage (WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
 
-
     public void confirmVisibilityOfRegisterPageHeaderTitle () {
         wait.until(ExpectedConditions.visibilityOf(registerPageHeaderTitle));
-
         waitPageTobeFullLoaded();
     }
 
@@ -62,7 +57,6 @@ public class RegistrationPage extends ISkillo {
         waitAndClick(registrationSignInButton);
     }
 
-
     public void msgStatusAfterSubmitUnsuccessfulRegistration () {
         String expectedMsgText = "Registration failed!";
         String msgText = popUpMsg.getText();
@@ -78,18 +72,14 @@ public class RegistrationPage extends ISkillo {
         clickOnSignInButton();
     }
 
-
     public boolean isUserNameDisplayed (String expectedUserNameIsDisplayed) {
         wait.until(ExpectedConditions.urlContains("http://training.skillo-bg.com:4200/users/"));
         wait.until(ExpectedConditions.visibilityOf(userNameTag));
         String username = userNameTag.getText();
         Assert.assertEquals(username, userNameTag.getText(), "The username is different than expected.");
-
         System.out.println("Username is displayed.");
-
         return false;
     }
-
 }
 
 

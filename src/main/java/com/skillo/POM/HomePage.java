@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-
 public class HomePage extends ISkillo {
     public static final String HOME_PAGE_SUFFIX = "posts/all";
 
@@ -23,7 +22,6 @@ public class HomePage extends ISkillo {
     private WebElement navigationLogOutButton;
     @FindBy(id = "nav-link-profile")
     private WebElement navigationProfileLink;
-
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -38,17 +36,14 @@ public class HomePage extends ISkillo {
         wait.until(ExpectedConditions.urlContains("http://training.skillo-bg.com:4200/posts/all"));
     }
 
-
     public void clickOnNavigationLoginButton() {
         waitAndClick(navigationLoginButton);
     }
-
 
     public void confirmVisibilityOfProfileLink () {
         wait.until(ExpectedConditions.elementToBeClickable(( By.id("nav-link-profile"))));
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(55));
         waitAndClick(navigationProfileLink);
-
     }
 
     public void clickOnNewPostButton() {

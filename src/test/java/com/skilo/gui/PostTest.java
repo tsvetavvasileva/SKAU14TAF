@@ -5,7 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
 import java.io.File;
 
 public class PostTest extends TestObject{
@@ -14,7 +13,6 @@ public class PostTest extends TestObject{
     public Object[][] getUsers() {
         File postPicture = new File("src\\test\\resources\\uploads\\CatTestImage.jpg");
         String caption = "Hello Kitty";
-
         Object[][] objects = {{
                 "testingDemos", "testing",
                 "testingDemos", postPicture, caption},
@@ -23,12 +21,11 @@ public class PostTest extends TestObject{
     }
 
     @Test(dataProvider = "PostTestDataProvider")
-    public void verifyUserCanCreateNewPostAndDeleteIt(String user, String password, String username, File file, String caption){
+    public void verifyUserCanCreateNewPostAndDeleteIt(String user, String password, String username, File file, String caption) {
         System.out.println("=== > *** Verify the user can create a new post and delete the new post *** < ===");
 
         final String HOME_PAGE_URL = "posts/all";
         final String LOGIN_PAGE_URL = "users/login";
-
 
         System.out.println("STEP 1: A guest user has opened ISkillo website home page.");
         HomePage homePage = new HomePage(super.getWebDriver());
@@ -92,5 +89,4 @@ public class PostTest extends TestObject{
         postModal.confirmDeletingPost();
         postModal.confirmYesToDelete();
     }
-
 }

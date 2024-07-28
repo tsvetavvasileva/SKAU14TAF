@@ -4,13 +4,11 @@ import com.skillo.POM.*;
 import org.testng.annotations.Test;
 import utils.ContentGeneration;
 
-
 public class RegistrationTest extends TestObject{
 
     @Test(priority= -1)
     public void verifyUserCanRegisterWithValidData() throws InterruptedException {
         System.out.println("=== > *** Verify a new user can register in the system with valid data *** < ===");
-
 
         final String USERNAME = ContentGeneration.createUser() ;
         final String EMAIL = ContentGeneration.createEmail();
@@ -42,14 +40,12 @@ public class RegistrationTest extends TestObject{
 
         System.out.println("STEP 7: The user has successfully clicked on HomePage Profile link after registering and logging in the system.");
         registrationPage.isUserNameDisplayed("Username is displayed.");
-
     }
 
     @Test
     public void verifyUserCannotRegisterWithInvalidData() throws InterruptedException {
         System.out.println("=== > *** Verify a new user cannot register in the system with invalid data *** < ===");
         HomePage homePage = new HomePage(super.getWebDriver());
-
 
         final String USERNAME = "W" ;
         final String EMAIL = "WRONG";
@@ -71,12 +67,10 @@ public class RegistrationTest extends TestObject{
         RegistrationPage registrationPage = new RegistrationPage(super.getWebDriver());
         registrationPage.confirmVisibilityOfRegisterPageHeaderTitle();
 
-
         System.out.println("STEP 5: The guest user has provided invalid registration data and has clicked on the Sign In button.");
         registrationPage.fullRegistrationInputsAndActions(USERNAME, EMAIL, "123456");
 
         System.out.println("Registration has failed, as user is not able to register successfully with invalid data.");
         registrationPage.msgStatusAfterSubmitUnsuccessfulRegistration();
     }
-
 }

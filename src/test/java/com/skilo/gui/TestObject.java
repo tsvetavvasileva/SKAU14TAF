@@ -19,7 +19,6 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class TestObject {
     protected static final String TEST_RESOURCES_DIR = "src\\test\\resources\\";
     protected static final String DOWNLOAD_DIR = TEST_RESOURCES_DIR.concat("download\\");
@@ -28,7 +27,6 @@ public class TestObject {
     protected static final String UPLOAD_DIR = TEST_RESOURCES_DIR.concat("uploads\\");
 
     private WebDriver webDriver;
-
 
     @BeforeSuite
     protected final void setupTestSuite() throws IOException {
@@ -64,7 +62,6 @@ public class TestObject {
     }
 
     protected WebDriver getWebDriver() {
-
         return webDriver;
     }
 
@@ -85,17 +82,14 @@ public class TestObject {
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory",
                 System.getProperty("user.dir").concat("\\").concat(DOWNLOAD_DIR));
-
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setExperimentalOption("prefs", prefs);
         chromeOptions.addArguments("disable-popup-blocking");
-
         return chromeOptions;
     }
 
     private void cleanDirectory(String directoryPath) throws IOException {
         File directory = new File(directoryPath);
-
         if (!directory.exists()) {
             FileUtils.forceMkdir(directory);
             System.out.println("Created folder with path: "+ directoryPath);
@@ -110,5 +104,4 @@ public class TestObject {
             System.out.printf("Unable to delete the files in Directory: %s%n", directoryPath);
         }
     }
-
 }

@@ -7,10 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-
 public class LoginPage extends ISkillo {
     public static final String LOGIN_PAGE_SUFFIX = "users/login";
-
 
     @FindBy(css = "p.h4")
     private WebElement loginPageHeaderTitle;
@@ -50,13 +48,11 @@ public class LoginPage extends ISkillo {
 
     public void clickSubmitButton() {
         waitAndClick(loginFormSubmitButton);
-
         waitPageTobeFullLoaded();
     }
 
     public void confirmVisibilityOfRememberMeLabelText () {
         wait.until(ExpectedConditions.visibilityOf(rememberMeLabelText));
-
         waitPageTobeFullLoaded();
     }
 
@@ -68,7 +64,6 @@ public class LoginPage extends ISkillo {
     public void verifyLoginPageUrlIsCorrect () {
         wait.until(ExpectedConditions.urlContains("http://training.skillo-bg.com:4200/users/login"));
     }
-
 
     public void loginWithUserAndPassword(String userName, String password) {
         provideUserName(userName);
@@ -87,7 +82,6 @@ public class LoginPage extends ISkillo {
     public void clickOnRegistrationLink(){
         waitAndClick(loginFormRegistrationLink);
     }
-
 
     public void msgStatusAfterInvalidLoginWithWrongPassword() {
         String expectedMsgText = "Invalid username or password";
@@ -115,7 +109,6 @@ public class LoginPage extends ISkillo {
         if (isTitleShown(loginPageHeaderTitle)) {
             isShown = true;
         }
-
         return  isShown;
     }
 
@@ -124,8 +117,6 @@ public class LoginPage extends ISkillo {
         wait.until(ExpectedConditions.visibilityOf(userNameTag));
         String username = userNameTag.getText();
         Assert.assertEquals(username, userNameTag.getText(), "The username is different than expected.");
-
         System.out.println("Username is displayed.");
-
     }
 }
