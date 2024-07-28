@@ -27,7 +27,7 @@ a broader online community with just one click. As well as to follow and control
 ISkillo has enabled this magical instant access to information and communication with the goal of building a vast worldwide network.
 
 ## Application / software under test
-- **ISkillo Training Website** - **http://training.skillo-bg.com:4200/**
+- **ISkillo Training Website** - [<<< **iSkillo Training Website** >>>](http://training.skillo-bg.com:4200/)
 
 
 
