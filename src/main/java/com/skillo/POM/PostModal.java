@@ -71,7 +71,7 @@ public class PostModal extends ISkillo {
         return true;
     }
 
-    public boolean confirmDeletingPost() {//there is "no usages" shown, but if you clik on "no usages" the method it is used
+    public boolean confirmDeletingPost() {//there is "no usages" shown, but if you click on "no usages" the method it is used
         try {
             wait.until(ExpectedConditions.visibilityOf(confirmDeletingPost)).isDisplayed();
         } catch  (NoSuchElementException e) {
