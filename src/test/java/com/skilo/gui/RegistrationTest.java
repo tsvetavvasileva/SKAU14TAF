@@ -7,7 +7,7 @@ import utils.ContentGeneration;
 public class RegistrationTest extends TestObject{
 
     @Test(priority= -1)
-    public void verifyUserCanRegisterWithValidData() throws InterruptedException {
+    public void verifyUserCanRegisterWithValidData() {
         System.out.println("=== > *** Verify a new user can register in the system with valid data *** < ===");
 
         final String USERNAME = ContentGeneration.createUser() ;
@@ -42,7 +42,7 @@ public class RegistrationTest extends TestObject{
     }
 
     @Test
-    public void verifyUserCannotRegisterWithInvalidData() throws InterruptedException {
+    public void verifyUserCannotRegisterWithInvalidData() {
         System.out.println("=== > *** Verify a new user cannot register in the system with invalid data *** < ===");
         HomePage homePage = new HomePage(super.getWebDriver());
 
