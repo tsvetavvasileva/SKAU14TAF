@@ -36,7 +36,7 @@ ISkillo has enabled this magical instant access to information and communication
 ### _List of test cases:_
 
 - **Home feature**:
-  - Verify a logged user can successfully navigate to an already created by someone else post (navigate to the third post on HomePage).
+  - Verify a logged user can successfully navigate to an already created by someone else post (navigate to the third post displayed on HomePage).
 
 
 - **Registration feature**:
