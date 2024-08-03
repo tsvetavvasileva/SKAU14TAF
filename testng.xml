@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/tsvet/Test/SKAU14TAF">
+        <classes>
+            <class name="com.skilo.gui.HomeTest">
+                <methods>
+                    <include name="verifyUserCanNavigateToAnAlreadyCreatedPost"/>
+                </methods>
+            </class>
+            <class name="com.skilo.gui.LoginTest">
+                <methods>
+                    <include name="verifyAlreadyRegisteredUserCanSuccessfullyLogin"/>
+                    <include name="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut"/>
+                    <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword"/>
+                    <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername"/>
+                    <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials"/>
+                </methods>
+            </class>
+            <class name="com.skilo.gui.PostTest">
+                <methods>
+                    <include name="verifyUserCanCreateNewPostAndDeleteIt"/>
+                </methods>
+            </class>
+            <class name="com.skilo.gui.ProfileTest">
+                <methods>
+                    <include name="verifyUserCanPostProfilePicture"/>
+                </methods>
+            </class>
+            <class name="com.skilo.gui.RegistrationTest">
+                <methods>
+                    <include name="verifyUserCanRegisterWithValidData"/>
+                    <include name="verifyUserCannotRegisterWithInvalidData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
