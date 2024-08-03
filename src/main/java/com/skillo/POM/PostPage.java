@@ -18,9 +18,9 @@ public class PostPage extends ISkillo {
     private WebElement imageTextElement;
     @FindBy(css = ".file[type='file']")
     private WebElement uploadField;
-    @FindBy(name = "caption")
+    @FindBy(xpath = "//div/input[contains(@formcontrolname,'caption')]")
     private WebElement captionElement;
-    @FindBy(id = "create-post")
+    @FindBy(css = "#create-post")
     private WebElement createPostButton;
 
     public PostPage(WebDriver driver) {

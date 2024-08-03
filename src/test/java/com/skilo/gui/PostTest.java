@@ -35,7 +35,7 @@ public class PostTest extends TestObject{
         System.out.println("STEP 2: The user has clicked on Login button.");
         homePage.clickOnNavigationLoginButton();
 
-        System.out.println("STEP 3: The HomePage URL is fully loaded.");
+        System.out.println("STEP 3: The LoginPage URL is fully loaded.");
         homePage.isUrlLoaded(LOGIN_PAGE_URL);
 
         System.out.println("STEP 4: The user has provided correct credentials and has logged in successfully.");
@@ -64,27 +64,27 @@ public class PostTest extends TestObject{
         System.out.println("STEP 11: The user has clicked on Submit Button to create the new post.");
         postPage.clickCreatePostButton();
 
+        System.out.println("STEP 12: The user has successfully created a new post.");
         PostModal postModal = new PostModal(super.getWebDriver());
         postModal.isImagePostVisible();
 
-        System.out.println("Step 12: The user has clicked on the first post.");
+        System.out.println("Step 13: The user has clicked on the first post.");
         ProfilePage profilePage = new ProfilePage((super.getWebDriver()));
         profilePage.clickPost(0);
 
-        System.out.println("STEP 13: Verifying that the image and Username are visible.");
+        System.out.println("STEP 14: Verifying that the image and Username are visible.");
         Assert.assertTrue(postModal.isImagePostVisible(), "The image is visible");
         Assert.assertTrue(postModal.getPostUser(),"The username is visible!");
 
-        System.out.println("STEP 14: Checking if the post count is correct.");
+        System.out.println("STEP 15: Checking if the post count is correct.");
         profilePage.getPostCount();
 
         int expectedPostCount = 1;
         int actualPostCount = profilePage.getPostCount();
-
         Assert.assertEquals(actualPostCount, expectedPostCount,"The number of Posts is incorrect!");
         System.out.println("The actual post count is" + actualPostCount);
 
-        System.out.println("STEP 15: The user has deleted the new post so this test can be repeated.");
+        System.out.println("STEP 16: The user has deleted the new post so this test can be repeated.");
         postModal.clickOnBinIcon();
         postModal.confirmDeletingPost();
         postModal.confirmYesToDelete();

@@ -17,7 +17,7 @@ public class PostModal extends ISkillo {
     private WebElement imagePost;
     @FindBy(css = "div.post-modal-img>img")
     private WebElement imageWhenClickedOn;
-    @FindBy(className = "post-user")
+    @FindBy(css = "a.post-user")
     private WebElement userNameDisplayedInPost;
     @FindBy(xpath= "//div/label/a")
     private WebElement deletePostButton;
@@ -28,7 +28,7 @@ public class PostModal extends ISkillo {
     @FindBy(xpath = "//div/div/button[1]")
     private WebElement clickYesToDeleteButton;
 
-    private WebDriverWait wait;
+    private final WebDriverWait wait;
 
     public PostModal (WebDriver driver) {
         super(driver);

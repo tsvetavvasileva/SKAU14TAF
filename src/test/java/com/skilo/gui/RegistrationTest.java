@@ -21,14 +21,13 @@ public class RegistrationTest extends TestObject{
         homePage.openHomePage();
 
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
-        homePage.clickOnNavigationLoginButton();
-
-        System.out.println("STEP 3: The guest user has clicked on Register link.");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.openLoginPage();
+
+        System.out.println("STEP 3: The guest user has clicked on Register link.");
         loginPage.clickOnRegistrationLink();
 
-        System.out.println("STEP 4: The guest user has accessed the Registration form.");
+        System.out.println("STEP 4: The guest user has successfully accessed the Registration form.");
         RegistrationPage registrationPage = new RegistrationPage(super.getWebDriver());
         registrationPage.confirmVisibilityOfRegisterPageHeaderTitle();
 
@@ -63,14 +62,14 @@ public class RegistrationTest extends TestObject{
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.clickOnRegistrationLink();
 
-        System.out.println("STEP 4: The guest user has accessed the Registration form.");
+        System.out.println("STEP 4: The guest user has successfully accessed the Registration form.");
         RegistrationPage registrationPage = new RegistrationPage(super.getWebDriver());
         registrationPage.confirmVisibilityOfRegisterPageHeaderTitle();
 
         System.out.println("STEP 5: The guest user has provided invalid registration data and has clicked on the Sign In button.");
         registrationPage.fullRegistrationInputsAndActions(USERNAME, EMAIL, "123456");
 
-        System.out.println("Registration has failed, as user is not able to register successfully with invalid data.");
+        System.out.println("Registration has failed, the user is not able to register successfully with invalid data.");
         registrationPage.msgStatusAfterSubmitUnsuccessfulRegistration();
     }
 }

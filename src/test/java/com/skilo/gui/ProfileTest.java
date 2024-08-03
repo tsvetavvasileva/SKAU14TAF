@@ -40,15 +40,14 @@ public class ProfileTest extends TestObject {
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.loginWithUserAndPassword(user, password);
 
-        System.out.println("STEP 5: The user has verified the Profile Link is visible.");
-        System.out.println("STEP 6: The user has clicked on Profile Link.");
+        System.out.println("STEP 5: The user has verified the Profile Link is visible and has clicked on it.");
         homePage.confirmVisibilityOfProfileLink();
 
-        System.out.println("STEP 7: The user has successfully uploaded a new Profile picture.");
+        System.out.println("STEP 6: The user has successfully uploaded a new Profile picture.");
         ProfilePage profilePage = new ProfilePage(super.getWebDriver());
         profilePage.uploadProfilePic(file);
 
+        System.out.println("STEP 7: Checking if the image is visible after upload.");
         profilePage.isProfilePicDisplayed();
-        System.out.println("STEP 8: Checking if the image is visible after upload.");
     }
 }

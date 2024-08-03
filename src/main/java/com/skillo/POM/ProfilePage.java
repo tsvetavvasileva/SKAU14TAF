@@ -14,9 +14,9 @@ import java.util.List;
 public class ProfilePage extends ISkillo {
     public static final String PROFILE_PAGE_SUFFIX = "users/8376";
 
-    @FindBy(id = "upload-img")
+    @FindBy(css = "#upload-img")
     private WebElement uploadProfilePic;
-    @FindBy(className = "profile-image-source")
+    @FindBy(css = "img.profile-image-source")
     private WebElement imgSource;
 
     public ProfilePage (WebDriver driver) {

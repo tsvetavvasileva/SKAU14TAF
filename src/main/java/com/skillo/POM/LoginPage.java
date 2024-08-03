@@ -10,23 +10,23 @@ import org.testng.Assert;
 public class LoginPage extends ISkillo {
     public static final String LOGIN_PAGE_SUFFIX = "users/login";
 
-    @FindBy(css = "p.h4")
+    @FindBy(xpath = "//p[contains(@class, 'h4') and contains(@class, 'mb-4')]")
     private WebElement loginPageHeaderTitle;
-    @FindBy(name = "usernameOrEmail")
+    @FindBy(css = "#defaultLoginFormUsername")
     private WebElement usernameInputField;
-    @FindBy(id = "defaultLoginFormPassword")
+    @FindBy(css = "#defaultLoginFormPassword")
     private WebElement passwordInputField;
     @FindBy(xpath = "//span[contains(text(),'Remember me')]")
     private WebElement rememberMeLabelText;
-    @FindBy(xpath = "//input[contains(@formcontrolname,'rememberMe')]")
+    @FindBy(xpath = "//div/input[contains(@formcontrolname,'rememberMe')]")
     private WebElement rememberMeCheckBox;
-    @FindBy(id = "sign-in-button")
+    @FindBy(css = "#sign-in-button")
     private WebElement loginFormSubmitButton;
-    @FindBy(xpath = "//a[contains(.,'Register')]")
+    @FindBy(xpath = "//a[contains(text(),'Register')]")
     private WebElement loginFormRegistrationLink;
     @FindBy(xpath = "//div[@class=\"toast-message ng-star-inserted\"]")
     private WebElement popUpMsg;
-    @FindBy(tagName = "h2")
+    @FindBy(xpath = "//div/div[1]/h2")
     private WebElement userNameTag;
 
     public LoginPage(WebDriver driver) {

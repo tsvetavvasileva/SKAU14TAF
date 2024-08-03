@@ -14,13 +14,13 @@ import java.time.Duration;
 public class HomePage extends ISkillo {
     public static final String HOME_PAGE_SUFFIX = "posts/all";
 
-    @FindBy(id = "nav-link-login")
+    @FindBy(css = "#nav-link-login")
     public WebElement navigationLoginButton;
-    @FindBy(id = "nav-link-new-post")
+    @FindBy(css = "#nav-link-new-post")
     private WebElement navigationNewPostButton;
-    @FindBy(xpath = "//i[@class='fas fa-sign-out-alt fa-lg']")
+    @FindBy(className = "fa-sign-out-alt")
     private WebElement navigationLogOutButton;
-    @FindBy(id = "nav-link-profile")
+    @FindBy(css = "#nav-link-profile")
     private WebElement navigationProfileLink;
 
     public HomePage(WebDriver driver) {
@@ -42,7 +42,7 @@ public class HomePage extends ISkillo {
 
     public void confirmVisibilityOfProfileLink () {
         wait.until(ExpectedConditions.elementToBeClickable(( By.id("nav-link-profile"))));
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(55));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
         waitAndClick(navigationProfileLink);
     }
 

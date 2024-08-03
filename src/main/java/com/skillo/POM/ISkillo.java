@@ -30,7 +30,7 @@ public class ISkillo {
         wait.until(ExpectedConditions.visibilityOf(element));
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
-        System.out.println("The user has clicked on element.");
+        System.out.println("The user has clicked on an element.");
         waitPageTobeFullLoaded();
     }
 

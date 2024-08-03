@@ -12,18 +12,16 @@ public class LoginTest extends TestObject {
         final String USERNAME = "gandalf";
         final String PASSWORD = "thegray";
 
-        HomePage homePage = new HomePage(super.getWebDriver());
-
         System.out.println("STEP 1: A guest user has opened the ISkillo HomePage.");
+        HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
 
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
-        homePage.clickOnNavigationLoginButton();
-
-        System.out.println("STEP 3: The guest user has verified that the LoginPage is opened as per requirements.");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.openLoginPage();
+
+        System.out.println("STEP 3: The guest user has verified that the LoginPage is opened as per requirements.");
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
 
@@ -56,9 +54,8 @@ public class LoginTest extends TestObject {
         final String USERNAME = "gandalf";
         final String PASSWORD = "thegray";
 
-        HomePage homePage = new HomePage(super.getWebDriver());
-
         System.out.println("STEP 1: A guest user has opened the ISkillo HomePage.");
+        HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
 
@@ -67,7 +64,6 @@ public class LoginTest extends TestObject {
 
         System.out.println("STEP 3: The guest user has verified that the LoginPage is opened as per requirements.");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
-        loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
 
@@ -103,9 +99,8 @@ public class LoginTest extends TestObject {
         final String USERNAME = "gandalf";
         final String PASSWORD = "WRONG_PASS";
 
-        HomePage homePage = new HomePage(super.getWebDriver());
-
         System.out.println("STEP 1: A guest user has opened the ISkillo HomePage.");
+        HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
 
@@ -114,7 +109,6 @@ public class LoginTest extends TestObject {
 
         System.out.println("STEP 3: The guest user has verified that the LoginPage is opened as per requirements.");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
-        loginPage.openLoginPage();
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
 
@@ -139,18 +133,16 @@ public class LoginTest extends TestObject {
         final String USERNAME = "WRONG";
         final String PASSWORD = "correctPassword";
 
-        HomePage homePage = new HomePage(super.getWebDriver());
-
         System.out.println("STEP 1: A guest user has opened the ISkillo HomePage.");
+        HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
 
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
-        homePage.clickOnNavigationLoginButton();
-
-        System.out.println("STEP 3: The user has verified that the LoginPage is opened as per requirements.");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.openLoginPage();
+
+        System.out.println("STEP 3: The user has verified that the LoginPage is opened as per requirements.");
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
 
@@ -175,18 +167,16 @@ public class LoginTest extends TestObject {
         final String USERNAME = ". ";
         final String PASSWORD = " ";
 
-        HomePage homePage = new HomePage(super.getWebDriver());
-
         System.out.println("STEP 1: A guest user has open the ISkillo HomePage.");
+        HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
         homePage.verifyHomePageUrlIsCorrect();
 
         System.out.println("STEP 2: The guest user has navigated to ISkillo LoginPage.");
-        homePage.clickOnNavigationLoginButton();
-
-        System.out.println("STEP 3: The guest user has verified that the LoginPage is opened as per requirements.");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.openLoginPage();
+
+        System.out.println("STEP 3: The guest user has verified that the LoginPage is opened as per requirements.");
         loginPage.verifyLoginPageUrlIsCorrect();
         loginPage.isLoginFormTitleShown();
 

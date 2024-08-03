@@ -10,19 +10,19 @@ import org.testng.Assert;
 public class RegistrationPage extends ISkillo {
     public static final String REGISTER_PAGE_SUFFIX = "users/register";
 
-    @FindBy(xpath = "/html/body/app-root/div[2]/app-register/div/div/form/h4")
+    @FindBy(css = "app-register>div>div>form>h4")
     private WebElement registerPageHeaderTitle;
-    @FindBy(xpath = "/html/body/app-root/div[2]/app-register/div/div/form/div[1]/input")
+    @FindBy(xpath = "//div/input[contains(@formcontrolname,'username')]")
     private WebElement usernameInputField;
-    @FindBy(xpath = "/html/body/app-root/div[2]/app-register/div/div/form/div[2]/input")
+    @FindBy(xpath = "//div/input[contains(@formcontrolname,'email')]")
     private WebElement emailInputField;
-    @FindBy(xpath = "//*[@id=\"defaultRegisterFormPassword\"]")
+    @FindBy(xpath = "//div/input[contains(@formcontrolname,'password')]")
     private WebElement passwordInputField;
-    @FindBy(xpath = "//*[@id=\"defaultRegisterPhonePassword\"]")
+    @FindBy(xpath = "//div/input[contains(@formcontrolname,'confirmPassword')]")
     private WebElement confirmPasswordInputField;
     @FindBy(css = "#sign-in-button")
     private WebElement registrationSignInButton;
-    @FindBy(tagName = "h2")
+    @FindBy(xpath = "//div/div[1]/h2")
     private WebElement userNameTag;
     @FindBy(xpath = "//div[@class=\"toast-bottom-right toast-container\"]")
     private WebElement popUpMsg;
