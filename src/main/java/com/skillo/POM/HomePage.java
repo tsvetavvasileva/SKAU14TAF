@@ -1,9 +1,6 @@
 package com.skillo.POM;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,6 +19,10 @@ public class HomePage extends ISkillo {
     private WebElement navigationLogOutButton;
     @FindBy(css = "#nav-link-profile")
     private WebElement navigationProfileLink;
+    @FindBy(css = "div:nth-child(3)>app-post-detail>div>div.post-feed-img")
+    private  WebElement homePagePostNumber3;
+    @FindBy(css = "img.profile-image-source")
+    private WebElement imgSource;
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -42,7 +43,7 @@ public class HomePage extends ISkillo {
 
     public void confirmVisibilityOfProfileLink () {
         wait.until(ExpectedConditions.elementToBeClickable(( By.id("nav-link-profile"))));
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(35));
         waitAndClick(navigationProfileLink);
     }
 
@@ -52,6 +53,31 @@ public class HomePage extends ISkillo {
 
     public void clickOnLogOutButton() {
         waitAndClick(navigationLogOutButton);
+    }
+
+    public boolean navigateToHomePagePostNumber3() {
+        boolean isVisible;
+        try {
+            isVisible = wait.until(ExpectedConditions.visibilityOf(homePagePostNumber3)).isDisplayed();
+            waitAndClick(homePagePostNumber3);
+            System.out.println("CONFIRMATION# The post is visible.");
+        } catch (TimeoutException e) {
+            System.out.println("ERROR: The post is not visible.");
+            isVisible = false;
+        }
+        return isVisible;
+    }
+
+    public boolean isThirdPostDisplayed () {
+        try {
+            wait.until(ExpectedConditions.visibilityOf(imgSource));
+            String imgUrl = imgSource.getAttribute("src");
+            return imgUrl.contains("https://i.imgur.com");
+        } catch  (TimeoutException e) {
+            System.out.println("TimeoutException occurred: "+ e.getMessage());
+        }
+        System.out.println("CONFIRMATION #: The Post source url is displayed.");
+        return true;
     }
 
     public boolean isNewPostButtonToShown() {

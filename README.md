@@ -34,6 +34,11 @@ ISkillo has enabled this magical instant access to information and communication
 ## Test  are performed with Selenium WebDriver v.4.21.0 and TestNG v.7.10.2 - Java v.21 unit framework:
 
 ### _List of test cases:_
+
+- **Home feature**:
+  - Verify a logged user can successfully navigate to an already created by someone else post (navigate to the third post on HomePage).
+
+
 - **Registration feature**:
   - Verify user can register in the system with valid credentials.
   - Verify user cannot register in the system with invalid credentials.
