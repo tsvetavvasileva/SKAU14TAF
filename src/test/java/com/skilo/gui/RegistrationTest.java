@@ -10,7 +10,7 @@ public class RegistrationTest extends TestObject{
     public void verifyUserCanRegisterWithValidData() {
         System.out.println("=== > *** Verify a new user can register in the system with valid data *** < ===");
 
-        final String USERNAME = ContentGeneration.createUser() ;
+        final String USERNAME = ContentGeneration.createUser();
         final String EMAIL = ContentGeneration.createEmail();
 
         System.out.println("THE RANDOM GENERATED USERNAME IS: " + USERNAME);
@@ -46,7 +46,7 @@ public class RegistrationTest extends TestObject{
         System.out.println("=== > *** Verify a new user cannot register in the system with invalid data *** < ===");
         HomePage homePage = new HomePage(super.getWebDriver());
 
-        final String USERNAME = "W" ;
+        final String USERNAME = "W";
         final String EMAIL = "WRONG";
 
         System.out.println("THE RANDOM GENERATED USERNAME IS: " + USERNAME);
