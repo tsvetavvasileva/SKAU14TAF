@@ -43,7 +43,7 @@ public class HomePage extends ISkillo {
 
     public void confirmVisibilityOfProfileLink () {
         wait.until(ExpectedConditions.elementToBeClickable(( By.id("nav-link-profile"))));
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(35));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(55));
         waitAndClick(navigationProfileLink);
     }
 
