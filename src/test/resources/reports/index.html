@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                    <span class="method-stats">10 methods, 2 failed,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.LoginTest" class="method navigator-link" hash-for-method="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.HomeTest" class="method navigator-link" hash-for-method="verifyUserCanNavigateToAnAlreadyCreatedPost">verifyUserCanNavigateToAnAlreadyCreatedPost</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-All_Test_Suite -->
@@ -142,11 +147,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.HomeTest" class="method navigator-link" hash-for-method="verifyUserCanNavigateToAnAlreadyCreatedPost">verifyUserCanNavigateToAnAlreadyCreatedPost</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="com.skilo.gui.ProfileTest" class="method navigator-link" hash-for-method="verifyUserCanPostProfilePicture(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)">verifyUserCanPostProfilePicture(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -172,6 +172,82 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-All_Test_Suite" class="panel All_Test_Suite">
+          <div class="suite-All_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.skilo.gui.HomeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserCanNavigateToAnAlreadyCreatedPost">
+                  </a> <!-- verifyUserCanNavigateToAnAlreadyCreatedPost -->
+                  <span class="method-name">verifyUserCanNavigateToAnAlreadyCreatedPost</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [23b75a4c648413d57c8d99863b66352b, clickElement {id=f.CEA18C7BD4EC9E6AFB92783C1C263E16.d.A5F6950211FB5445F6F5D9A55605B81F.e.281}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\tsvet\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54113}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54113/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (23b75a4c648413d57c8d99863b66352b)] -&gt; css selector: div:nth-child(3)&gt;app-post-detail&gt;div&gt;div.post-feed-img]
+Session ID: 23b75a4c648413d57c8d99863b66352b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at com.skillo.POM.ISkillo.waitAndClick(ISkillo.java:32)
+	at com.skillo.POM.HomePage.navigateToHomePagePostNumber3(HomePage.java:62)
+	at com.skilo.gui.HomeTest.verifyUserCanNavigateToAnAlreadyCreatedPost(HomeTest.java:48)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-failed -->
           <div class="suite-All_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
@@ -278,21 +354,6 @@
                   </a> <!-- verifyUserCanPostProfilePicture(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...) -->
                   <span class="method-name">verifyUserCanPostProfilePicture</span>
                   <span class="parameters">(testingDemos,testing,testingDemos,src\test\resources\uploads\testUpload.jpg,Testing create post caption)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_Test_Suite-class-passed -->
-          <div class="suite-All_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.skilo.gui.HomeTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUserCanNavigateToAnAlreadyCreatedPost">
-                  </a> <!-- verifyUserCanNavigateToAnAlreadyCreatedPost -->
-                  <span class="method-name">verifyUserCanNavigateToAnAlreadyCreatedPost</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -416,50 +477,50 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserCanNavigateToAnAlreadyCreatedPost')
-data.setCell(0, 2, 'com.skilo.gui.HomeTest')
-data.setCell(0, 3, 32269);
+data.setCell(0, 1, 'verifyUserCanCreateNewPostAndDeleteIt')
+data.setCell(0, 2, 'com.skilo.gui.PostTest')
+data.setCell(0, 3, 20081);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserCanCreateNewPostAndDeleteIt')
-data.setCell(1, 2, 'com.skilo.gui.PostTest')
-data.setCell(1, 3, 23168);
+data.setCell(1, 1, 'verifyUserCanNavigateToAnAlreadyCreatedPost')
+data.setCell(1, 2, 'com.skilo.gui.HomeTest')
+data.setCell(1, 3, 3753);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyUserCanRegisterWithValidData')
-data.setCell(2, 2, 'com.skilo.gui.RegistrationTest')
-data.setCell(2, 3, 9336);
+data.setCell(2, 1, 'verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut')
+data.setCell(2, 2, 'com.skilo.gui.LoginTest')
+data.setCell(2, 3, 3576);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyAlreadyRegisteredUserCanSuccessfullyLogin')
-data.setCell(3, 2, 'com.skilo.gui.LoginTest')
-data.setCell(3, 3, 8696);
+data.setCell(3, 1, 'verifyUserCanRegisterWithValidData')
+data.setCell(3, 2, 'com.skilo.gui.RegistrationTest')
+data.setCell(3, 3, 3334);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut')
-data.setCell(4, 2, 'com.skilo.gui.LoginTest')
-data.setCell(4, 3, 7378);
+data.setCell(4, 1, 'verifyUserCannotRegisterWithInvalidData')
+data.setCell(4, 2, 'com.skilo.gui.RegistrationTest')
+data.setCell(4, 3, 3147);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials')
+data.setCell(5, 1, 'verifyAlreadyRegisteredUserCanSuccessfullyLogin')
 data.setCell(5, 2, 'com.skilo.gui.LoginTest')
-data.setCell(5, 3, 6261);
+data.setCell(5, 3, 3136);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyUserCanPostProfilePicture')
 data.setCell(6, 2, 'com.skilo.gui.ProfileTest')
-data.setCell(6, 3, 6257);
+data.setCell(6, 3, 2954);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername')
+data.setCell(7, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword')
 data.setCell(7, 2, 'com.skilo.gui.LoginTest')
-data.setCell(7, 3, 5231);
+data.setCell(7, 3, 2477);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword')
+data.setCell(8, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials')
 data.setCell(8, 2, 'com.skilo.gui.LoginTest')
-data.setCell(8, 3, 5066);
+data.setCell(8, 3, 2322);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyUserCannotRegisterWithInvalidData')
-data.setCell(9, 2, 'com.skilo.gui.RegistrationTest')
-data.setCell(9, 3, 4623);
+data.setCell(9, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername')
+data.setCell(9, 2, 'com.skilo.gui.LoginTest')
+data.setCell(9, 3, 1833);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 46 seconds</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -528,144 +589,146 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">527 ms</span>
+                <span class="method-start">542 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyUserCanNavigateToAnAlreadyCreatedPost</span>
-                <span class="method-start">2327 ms</span>
+                <span class="method-start">2350 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDownTest([TestResult name=verifyUserCanNavigateToAnAlreadyCreatedPost status=SUCCESS method=HomeTest.verifyUs...)</span>
-                <span class="method-start">34598 ms</span>
+                <span class="method-name">tearDownTest([TestResult name=verifyUserCanNavigateToAnAlreadyCreatedPost status=FAILURE method=HomeTest.verifyUs...)</span>
+                <span class="method-start">6155 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.skilo.gui.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">34820 ms</span>
+                <span class="method-start">6843 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials</span>
-                <span class="method-start">36099 ms</span>
+                <span class="method-start">9562 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials status...)</span>
-                <span class="method-start">42360 ms</span>
+                <span class="method-start">11884 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">42524 ms</span>
+                <span class="method-start">12102 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword</span>
-                <span class="method-start">43695 ms</span>
+                <span class="method-start">13683 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword status=FAILURE ...)</span>
-                <span class="method-start">48765 ms</span>
+                <span class="method-start">16161 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">49091 ms</span>
+                <span class="method-start">16519 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername</span>
-                <span class="method-start">50516 ms</span>
+                <span class="method-start">17808 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername status=SUCCESS ...)</span>
-                <span class="method-start">55747 ms</span>
+                <span class="method-start">19642 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">55918 ms</span>
+                <span class="method-start">19859 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAlreadyRegisteredUserCanSuccessfullyLogin</span>
-                <span class="method-start">57063 ms</span>
+                <span class="method-start">21099 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanSuccessfullyLogin status=SUCCESS method=LoginTest.ver...)</span>
-                <span class="method-start">65762 ms</span>
+                <span class="method-start">24235 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">65911 ms</span>
+                <span class="method-start">24489 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut</span>
-                <span class="method-start">67056 ms</span>
+                <span class="method-start">25775 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut status=SUCCESS method=Logi...)</span>
-                <span class="method-start">74434 ms</span>
+                <span class="method-start">29352 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.skilo.gui.PostTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">74610 ms</span>
+                <span class="method-start">29555 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanCreateNewPostAndDeleteIt(testingDemos, testing, testingDemos, src\test\resources\uploads\CatTestImage.jpg, Hello Kitty)</span>
-                <span class="method-start">75845 ms</span>
+                <span class="method-start">30862 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyUserCanCreateNewPostAndDeleteIt status=SUCCESS method=PostTest.verifyUserCanC...)</span>
-                <span class="method-start">99013 ms</span>
+                <span class="method-start">50943 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.skilo.gui.ProfileTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">99180 ms</span>
+                <span class="method-start">51242 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanPostProfilePicture(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)</span>
-                <span class="method-start">100329 ms</span>
+                <span class="method-start">52555 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyUserCanPostProfilePicture status=SUCCESS method=ProfileTest.verifyUserCanPost...)</span>
-                <span class="method-start">106588 ms</span>
+                <span class="method-start">55509 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.skilo.gui.RegistrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">106751 ms</span>
+                <span class="method-start">55717 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanRegisterWithValidData</span>
-                <span class="method-start">107894 ms</span>
+                <span class="method-start">56945 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyUserCanRegisterWithValidData status=SUCCESS method=RegistrationTest.verifyUse...)</span>
-                <span class="method-start">117230 ms</span>
+                <span class="method-start">60279 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">117384 ms</span>
+                <span class="method-start">60487 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCannotRegisterWithInvalidData</span>
-                <span class="method-start">118527 ms</span>
+                <span class="method-start">61723 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyUserCannotRegisterWithInvalidData status=SUCCESS method=RegistrationTest.veri...)</span>
-                <span class="method-start">123150 ms</span>
+                <span class="method-start">64870 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.skilo.gui.HomeTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">cleanFiles</span>
-                <span class="method-start">123352 ms</span>
+                <span class="method-start">65129 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

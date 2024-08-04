@@ -26,7 +26,7 @@ public class LoginPage extends ISkillo {
     private WebElement loginFormRegistrationLink;
     @FindBy(xpath = "//div[@class=\"toast-message ng-star-inserted\"]")
     private WebElement popUpMsg;
-    @FindBy(xpath = "//div/div[1]/h2")
+    @FindBy(css = "div>div.col-12.col-lg-6.profile-user-settings>h2")
     private WebElement userNameTag;
 
     public LoginPage(WebDriver driver) {
