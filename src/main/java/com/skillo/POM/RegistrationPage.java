@@ -22,7 +22,7 @@ public class RegistrationPage extends ISkillo {
     private WebElement confirmPasswordInputField;
     @FindBy(css = "#sign-in-button")
     private WebElement registrationSignInButton;
-    @FindBy(xpath = "//div/div[1]/h2")
+    @FindBy(css = "div>div.col-12.col-lg-6.profile-user-settings>h2")
     private WebElement userNameTag;
     @FindBy(xpath = "//div[@class=\"toast-bottom-right toast-container\"]")
     private WebElement popUpMsg;
