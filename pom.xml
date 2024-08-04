@@ -13,9 +13,9 @@
 
     <developers>
         <developer>
-            <id>StudentID</id>
-            <name>Student Full Name</name>
-            <email>Student email for companies to be contacted</email>
+            <id>StudentID: N/A</id>
+            <name>Tsveta Valentinova Vasileva</name>
+            <email>tsveta.v.vasileva@gmail.com </email>
         </developer>
     </developers>
 
@@ -79,13 +79,18 @@
             <version>5.8.0</version>
         </dependency>
 
-        <!--   Logging     -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.23.1</version>
         </dependency>
         <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+                <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.23.1</version>

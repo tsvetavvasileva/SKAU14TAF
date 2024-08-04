@@ -1,38 +1,44 @@
 package com.skillo.POM;
 
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
-public class RegistrationPage extends ISkillo   {
+public class RegistrationPage extends ISkillo {
+    public static final String REGISTER_PAGE_SUFFIX = "users/register";
 
-    public static final String REGISTER_PAGE_URL = "users/register";
-
-    @FindBy(xpath = "/html/body/app-root/div[2]/app-register/div/div/form/h4")
+    @FindBy(css = "app-register>div>div>form>h4")
     private WebElement registerPageHeaderTitle;
-    @FindBy (xpath = "/html/body/app-root/div[2]/app-register/div/div/form/div[1]/input")
+    @FindBy(xpath = "//div/input[contains(@formcontrolname,'username')]")
     private WebElement usernameInputField;
-    @FindBy (xpath = "/html/body/app-root/div[2]/app-register/div/div/form/div[2]/input")
+    @FindBy(xpath = "//div/input[contains(@formcontrolname,'email')]")
     private WebElement emailInputField;
-    @FindBy (xpath = "//*[@id=\"defaultRegisterFormPassword\"]")
+    @FindBy(xpath = "//div/input[contains(@formcontrolname,'password')]")
     private WebElement passwordInputField;
-    @FindBy (xpath = "//*[@id=\"defaultRegisterPhonePassword\"]")
+    @FindBy(xpath = "//div/input[contains(@formcontrolname,'confirmPassword')]")
     private WebElement confirmPasswordInputField;
-    @FindBy (css = "#sign-in-button")
+    @FindBy(css = "#sign-in-button")
     private WebElement registrationSignInButton;
+    @FindBy(xpath = "//div/div[1]/h2")
+    private WebElement userNameTag;
+    @FindBy(xpath = "//div[@class=\"toast-bottom-right toast-container\"]")
+    private WebElement popUpMsg;
 
-    public RegistrationPage(WebDriver driver) {
+    public RegistrationPage (WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
-//User Actions
+    public void confirmVisibilityOfRegisterPageHeaderTitle () {
+        wait.until(ExpectedConditions.visibilityOf(registerPageHeaderTitle));
+        waitPageTobeFullLoaded();
+    }
 
     public void provideUsername (String username) {
-        typeTextInField(usernameInputField,username);
+        typeTextInField(usernameInputField, username);
     }
 
     public void provideEmail (String email) {
@@ -47,8 +53,15 @@ public class RegistrationPage extends ISkillo   {
         typeTextInField(confirmPasswordInputField, password);
     }
 
-    public void clickOnSignInButton() {
+    public void clickOnSignInButton () {
         waitAndClick(registrationSignInButton);
+    }
+
+    public void msgStatusAfterSubmitUnsuccessfulRegistration () {
+        String expectedMsgText = "Registration failed!";
+        String msgText = popUpMsg.getText();
+        wait.until(ExpectedConditions.visibilityOf(popUpMsg));
+        Assert.assertEquals(msgText, expectedMsgText);
     }
 
     public void fullRegistrationInputsAndActions (String username, String email, String password) {
@@ -59,22 +72,15 @@ public class RegistrationPage extends ISkillo   {
         clickOnSignInButton();
     }
 
-    //Getters
-    public String getUserNamePlaceHolder () {
-        wait.until(ExpectedConditions.visibilityOf(usernameInputField));
-        return usernameInputField.getAttribute("value");
-    }
-
-    public boolean isUserNamePlaceHolderCorrect(String expectedUserNamePlaceHolder) {
-        boolean isPerRequirments = false;
-        try {
-            String actualUserNamePlaceHolder = getUserNamePlaceHolder();
-            isPerRequirments = expectedUserNamePlaceHolder.equals(actualUserNamePlaceHolder);
-
-        }catch (NoSuchElementException e){
-            System.out.println("ERROR ! The username placeHolder is not correct");
-            isPerRequirments = false;
-        }
-        return isPerRequirments;
+    public boolean isUserNameDisplayed (String expectedUserNameIsDisplayed) {
+        wait.until(ExpectedConditions.urlContains("http://training.skillo-bg.com:4200/users/"));
+        wait.until(ExpectedConditions.visibilityOf(userNameTag));
+        String username = userNameTag.getText();
+        Assert.assertEquals(username, userNameTag.getText(), "The username is different than expected.");
+        System.out.println("Username is displayed.");
+        return false;
     }
 }
+
+
+
