@@ -191,7 +191,7 @@
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
 	at com.skillo.POM.LoginPage.msgStatusAfterInvalidLoginWithWrongPassword(LoginPage.java:90)
-	at com.skilo.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:131)
+	at com.skilo.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:126)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -418,43 +418,43 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyUserCanNavigateToAnAlreadyCreatedPost')
 data.setCell(0, 2, 'com.skilo.gui.HomeTest')
-data.setCell(0, 3, 28414);
+data.setCell(0, 3, 29315);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyUserCanCreateNewPostAndDeleteIt')
 data.setCell(1, 2, 'com.skilo.gui.PostTest')
-data.setCell(1, 3, 20869);
+data.setCell(1, 3, 20450);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut')
 data.setCell(2, 2, 'com.skilo.gui.LoginTest')
-data.setCell(2, 3, 7213);
+data.setCell(2, 3, 3764);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyUserCannotRegisterWithInvalidData')
+data.setCell(3, 1, 'verifyUserCanRegisterWithValidData')
 data.setCell(3, 2, 'com.skilo.gui.RegistrationTest')
-data.setCell(3, 3, 5341);
+data.setCell(3, 3, 3445);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyUserCanRegisterWithValidData')
-data.setCell(4, 2, 'com.skilo.gui.RegistrationTest')
-data.setCell(4, 3, 4333);
+data.setCell(4, 1, 'verifyAlreadyRegisteredUserCanSuccessfullyLogin')
+data.setCell(4, 2, 'com.skilo.gui.LoginTest')
+data.setCell(4, 3, 3234);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyUserCanPostProfilePicture')
-data.setCell(5, 2, 'com.skilo.gui.ProfileTest')
-data.setCell(5, 3, 4057);
+data.setCell(5, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword')
+data.setCell(5, 2, 'com.skilo.gui.LoginTest')
+data.setCell(5, 3, 2700);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyAlreadyRegisteredUserCanSuccessfullyLogin')
-data.setCell(6, 2, 'com.skilo.gui.LoginTest')
-data.setCell(6, 3, 3078);
+data.setCell(6, 1, 'verifyUserCanPostProfilePicture')
+data.setCell(6, 2, 'com.skilo.gui.ProfileTest')
+data.setCell(6, 3, 2681);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword')
-data.setCell(7, 2, 'com.skilo.gui.LoginTest')
-data.setCell(7, 3, 2571);
+data.setCell(7, 1, 'verifyUserCannotRegisterWithInvalidData')
+data.setCell(7, 2, 'com.skilo.gui.RegistrationTest')
+data.setCell(7, 3, 2355);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername')
+data.setCell(8, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials')
 data.setCell(8, 2, 'com.skilo.gui.LoginTest')
-data.setCell(8, 3, 2128);
+data.setCell(8, 3, 2051);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials')
+data.setCell(9, 1, 'verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername')
 data.setCell(9, 2, 'com.skilo.gui.LoginTest')
-data.setCell(9, 3, 1822);
+data.setCell(9, 3, 1943);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
@@ -528,144 +528,144 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">616 ms</span>
+                <span class="method-start">575 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanNavigateToAnAlreadyCreatedPost</span>
-                <span class="method-start">2831 ms</span>
+                <span class="method-start">2545 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyUserCanNavigateToAnAlreadyCreatedPost status=SUCCESS method=HomeTest.verifyUs...)</span>
-                <span class="method-start">31245 ms</span>
+                <span class="method-start">31862 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.skilo.gui.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">31482 ms</span>
+                <span class="method-start">32071 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials</span>
-                <span class="method-start">32730 ms</span>
+                <span class="method-start">33729 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials status...)</span>
-                <span class="method-start">34553 ms</span>
+                <span class="method-start">35781 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">34754 ms</span>
+                <span class="method-start">36012 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword</span>
-                <span class="method-start">35906 ms</span>
+                <span class="method-start">37290 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword status=FAILURE ...)</span>
-                <span class="method-start">38481 ms</span>
+                <span class="method-start">39995 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">38787 ms</span>
+                <span class="method-start">40355 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername</span>
-                <span class="method-start">40201 ms</span>
+                <span class="method-start">41673 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername status=SUCCESS ...)</span>
-                <span class="method-start">42330 ms</span>
+                <span class="method-start">43617 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">42526 ms</span>
+                <span class="method-start">43832 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAlreadyRegisteredUserCanSuccessfullyLogin</span>
-                <span class="method-start">43653 ms</span>
+                <span class="method-start">45035 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanSuccessfullyLogin status=SUCCESS method=LoginTest.ver...)</span>
-                <span class="method-start">46733 ms</span>
+                <span class="method-start">48269 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">47021 ms</span>
+                <span class="method-start">48499 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut</span>
-                <span class="method-start">48491 ms</span>
+                <span class="method-start">49755 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyAlreadyRegisteredUserCanSuccessfullyLoginAndLogOut status=SUCCESS method=Logi...)</span>
-                <span class="method-start">55704 ms</span>
+                <span class="method-start">53519 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.skilo.gui.PostTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">55864 ms</span>
+                <span class="method-start">53730 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanCreateNewPostAndDeleteIt(testingDemos, testing, testingDemos, src\test\resources\uploads\CatTestImage.jpg, Hello Kitty)</span>
-                <span class="method-start">57067 ms</span>
+                <span class="method-start">54920 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyUserCanCreateNewPostAndDeleteIt status=SUCCESS method=PostTest.verifyUserCanC...)</span>
-                <span class="method-start">77936 ms</span>
+                <span class="method-start">75370 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.skilo.gui.ProfileTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">78169 ms</span>
+                <span class="method-start">75597 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanPostProfilePicture(testingDemos, testing, testingDemos, src\test\resources\uploads\testUpload.jpg, Testing create post ...)</span>
-                <span class="method-start">79367 ms</span>
+                <span class="method-start">76831 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyUserCanPostProfilePicture status=SUCCESS method=ProfileTest.verifyUserCanPost...)</span>
-                <span class="method-start">83424 ms</span>
+                <span class="method-start">79514 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.skilo.gui.RegistrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">83624 ms</span>
+                <span class="method-start">79742 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanRegisterWithValidData</span>
-                <span class="method-start">84772 ms</span>
+                <span class="method-start">80907 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyUserCanRegisterWithValidData status=SUCCESS method=RegistrationTest.verifyUse...)</span>
-                <span class="method-start">89105 ms</span>
+                <span class="method-start">84352 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">89290 ms</span>
+                <span class="method-start">84578 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCannotRegisterWithInvalidData</span>
-                <span class="method-start">90465 ms</span>
+                <span class="method-start">85780 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=verifyUserCannotRegisterWithInvalidData status=SUCCESS method=RegistrationTest.veri...)</span>
-                <span class="method-start">95806 ms</span>
+                <span class="method-start">88136 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.skilo.gui.HomeTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">cleanFiles</span>
-                <span class="method-start">96022 ms</span>
+                <span class="method-start">88381 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
