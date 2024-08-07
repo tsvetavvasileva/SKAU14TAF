@@ -3,15 +3,6 @@
 <suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="C:/Users/tsvet/Test/SKAU14TAF(failed)" verbose="0">
     <classes>
-      <class name="com.skilo.gui.HomeTest">
-        <methods>
-          <include name="setupTestSuite"/>
-          <include name="cleanFiles"/>
-          <include name="tearDownTest"/>
-          <include name="verifyUserCanNavigateToAnAlreadyCreatedPost"/>
-          <include name="setUpTest"/>
-        </methods>
-      </class> <!-- com.skilo.gui.HomeTest -->
       <class name="com.skilo.gui.LoginTest">
         <methods>
           <include name="setupTestSuite"/>

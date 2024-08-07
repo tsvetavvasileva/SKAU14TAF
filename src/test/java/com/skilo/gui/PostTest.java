@@ -87,6 +87,6 @@ public class PostTest extends TestObject{
         System.out.println("STEP 16: The user has deleted the new post so this test can be repeated.");
         postModal.clickOnBinIcon();
         postModal.confirmDeletingPost();
-        postModal.confirmYesToDelete();
+        postModal.confirmYesToDeleteWithAssert();
     }
 }

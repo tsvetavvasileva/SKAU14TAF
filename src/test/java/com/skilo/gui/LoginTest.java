@@ -88,8 +88,9 @@ public class LoginTest extends TestObject {
         loginPage.isUserNameDisplayed("Username is displayed.");
         homePage.isLogOutButtonShown();
 
-        System.out.println("STEP 9: The user has successfully clicked on the LogOut Button.");
+        System.out.println("STEP 10: The user has successfully clicked on the LogOut Button.");
         homePage.clickOnLogOutButton();
+        loginPage.verifyCurrentUrl();
     }
 
     @Test
