@@ -81,12 +81,13 @@ public class PostModal extends ISkillo {
         return true;
     }
 
-    public boolean confirmYesToDelete() {
+    public boolean confirmYesToDeleteWithAssert() {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(clickYesToDeleteButton)).click();
             popUpMsg.getText();
             wait.until(ExpectedConditions.visibilityOf(popUpMsg));
             Assert.assertEquals(popUpMsg.getText(), "Post Deleted!", "Post Deleted!");
+            System.out.println("The pop-up message is" + ": " + popUpMsg.getText());
         } catch  (NoSuchElementException e) {
             System.out.println("NoSuchElementException occured: "+ e.getMessage());
         }

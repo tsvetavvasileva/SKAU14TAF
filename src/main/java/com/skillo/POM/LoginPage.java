@@ -119,4 +119,10 @@ public class LoginPage extends ISkillo {
         Assert.assertEquals(username, userNameTag.getText(), "The username is different than expected.");
         System.out.println("Username is displayed.");
     }
+
+    public void verifyCurrentUrl() {
+        driver.getCurrentUrl();
+        System.out.println(driver.getCurrentUrl() + " " + "this is the current url");
+        waitPageTobeFullLoaded();
+    }
 }
